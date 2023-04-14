@@ -1,4 +1,4 @@
-package de.elia;
+package de.elia.api;
 
 import org.bukkit.plugin.java.JavaPlugin;
 import org.jetbrains.annotations.NotNull;

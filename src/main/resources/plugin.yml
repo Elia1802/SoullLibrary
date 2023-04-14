@@ -1,4 +1,6 @@
 name: SoulLibrary
-main: de.elia.Main
+main: de.elia.api.Main
 version: 1.0.1
 api-version: 1.19
+loadbefore:
+  - SoulBossSystem
