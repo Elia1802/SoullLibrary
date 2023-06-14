@@ -14,10 +14,10 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- * @author - Elia
- * @since - V. 1.0
- * @version - V. 1.0
- * @description -This class simplifies the principle of the {@link MiniMessage}. If used correctly,
+ * @author Elia
+ * @since V.1.0.0
+ * @version V.1.0.0
+ * @description This class simplifies the principle of the {@link MiniMessage}. If used correctly,
  *               you can save a lot of space. You don't need color codes of the {@link MiniMessage}.
  */
 public class MessageBuilder {
@@ -31,8 +31,8 @@ public class MessageBuilder {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V.1.0.0
+     * @version V.1.0.0
      * @description Make a new line between each {@link Component}
      * @param lines Requires the Components
      * @return {@link Component}
@@ -50,8 +50,8 @@ public class MessageBuilder {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V.1.0.0
+     * @version V.1.0.0
      * @description Make a new line between each {@link Component}
      * @param lines Requires the Components
      * @return {@link Component}
@@ -69,10 +69,10 @@ public class MessageBuilder {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V.1.0.0
+     * @version V.1.0.0
      * @description Send a broadcast message
-     * @param message Requries a message as {@link Component}
+     * @param message Requires a message as {@link Component}
      */
     public void broadcast(Component message){
         Bukkit.broadcast(message);
@@ -80,10 +80,10 @@ public class MessageBuilder {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V.1.0.0
+     * @version V.1.0.0
      * @description Send a broadcast message with Prefix
-     * @param message Requries a message as {@link Component}
+     * @param message Requires a message as {@link Component}
      */
     public void broadcastWithPrefix(Component message){
         Bukkit.broadcast(prefix.prefix().append(message));
@@ -91,10 +91,10 @@ public class MessageBuilder {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V.1.0.0
+     * @version V.1.0.0
      * @description Send a broadcast message
-     * @param message Requries a message as {@link String}
+     * @param message Requires a message as {@link String}
      */
     public void broadcast(String message){
         Bukkit.broadcast(miniMessage.deserialize(message));
@@ -102,10 +102,10 @@ public class MessageBuilder {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V.1.0.0
+     * @version V.1.0.0
      * @description Send a broadcast message with Prefix
-     * @param message Requries a message as {@link Component}
+     * @param message Requires a message as {@link Component}
      */
     public void broadcastWithPrefix(String message){
         Bukkit.broadcast(miniMessage.deserialize(prefix.prefix() + message));
@@ -113,12 +113,12 @@ public class MessageBuilder {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
-     * @description Send a broadcast message to {@link Player} with a specify permisson
-     * @param player Requries a {@link Player}
+     * @since V.1.0.0
+     * @version V.1.0.0
+     * @description Send a broadcast message to {@link Player} with a specify permission
+     * @param player Requires a {@link Player}
      * @param permission Requires a permission
-     * @param message Requries a message as {@link Component}
+     * @param message Requires a message as {@link Component}
      */
     public void broadcast(@NotNull Player player , String permission , Component message){
         if (player.hasPermission(permission)) {
@@ -128,12 +128,12 @@ public class MessageBuilder {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
-     * @description Send a broadcast message to {@link Player} with a specify permisson with prefix
-     * @param player Requries a {@link Player}
+     * @since V.1.0.0
+     * @version V.1.0.0
+     * @description Send a broadcast message to {@link Player} with a specify permission with prefix
+     * @param player Requires a {@link Player}
      * @param permission Requires a permission
-     * @param message Requries a message as {@link Component}
+     * @param message Requires a message as {@link Component}
      */
     public void broadcastWithPrefix(@NotNull Player player , String permission , Component message){
         if (player.hasPermission(permission)) {
@@ -143,12 +143,12 @@ public class MessageBuilder {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
-     * @description Send a broadcast message to {@link Player} with a specify permisson
-     * @param player Requries a {@link Player}
+     * @since V.1.0.0
+     * @version V.1.0.0
+     * @description Send a broadcast message to {@link Player} with a specify permission
+     * @param player Requires a {@link Player}
      * @param permission Requires a permission
-     * @param message Requries a message as {@link String}
+     * @param message Requires a message as {@link String}
      */
     public void broadcast(@NotNull Player player , String permission , String message){
         if (player.hasPermission(permission)) {
@@ -158,12 +158,12 @@ public class MessageBuilder {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
-     * @description Send a broadcast message to {@link Player} with a specify permisson with prefix
-     * @param player Requries a {@link Player}
+     * @since V.1.0.0
+     * @version V.1.0.0
+     * @description Send a broadcast message to {@link Player} with a specify permission with prefix
+     * @param player Requires a {@link Player}
      * @param permission Requires a permission
-     * @param message Requries a message as {@link String}
+     * @param message Requires a message as {@link String}
      */
     public void broadcastWithPrefix(@NotNull Player player , String permission , String message){
         if (player.hasPermission(permission)) {
@@ -173,11 +173,11 @@ public class MessageBuilder {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
-     * @description Send a broadcast message to {@link Player} with a specify permisson
+     * @since V.1.0.0
+     * @version V.1.0.0
+     * @description Send a broadcast message to {@link Player} with a specify permission
      * @param permission Requires a permission
-     * @param message Requries a message as {@link Component}
+     * @param message Requires a message as {@link Component}
      */
     public void broadcast(Component message , String permission){
         Bukkit.broadcast(message , permission);
@@ -185,11 +185,11 @@ public class MessageBuilder {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
-     * @description Send a broadcast message to {@link Player} with a specify permisson with Prefix
+     * @since V.1.0.0
+     * @version V.1.0.0
+     * @description Send a broadcast message to {@link Player} with a specify permission with Prefix
      * @param permission Requires a permission
-     * @param message Requries a message as {@link Component}
+     * @param message Requires a message as {@link Component}
      */
     public void broadcastWithPrefix(Component message , String permission){
         Bukkit.broadcast(prefix.prefix().append(message) , permission);
@@ -197,11 +197,11 @@ public class MessageBuilder {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
-     * @description Send a broadcast message to {@link Player} with a specify permisson
+     * @since V.1.0.0
+     * @version V.1.0.0
+     * @description Send a broadcast message to {@link Player} with a specify permission
      * @param permission Requires a permission
-     * @param message Requries a message as {@link String}
+     * @param message Requires a message as {@link String}
      */
     public void broadcast(String message , String permission){
         Bukkit.broadcast(miniMessage.deserialize(message) , permission);
@@ -209,11 +209,11 @@ public class MessageBuilder {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
-     * @description Send a broadcast message to {@link Player} with a specify permisson with prefix
+     * @since V.1.0.0
+     * @version V.1.0.0
+     * @description Send a broadcast message to {@link Player} with a specify permission with prefix
      * @param permission Requires a permission
-     * @param message Requries a message as {@link String}
+     * @param message Requires a message as {@link String}
      */
     public void broadcastWithPrefix(String message , String permission){
         Bukkit.broadcast(miniMessage.deserialize(prefix.prefix() + message) , permission);
@@ -221,11 +221,11 @@ public class MessageBuilder {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V.1.0.0
+     * @version V.1.0.0
      * @description kick a player with a message
-     * @param player Requries a {@link Player}
-     * @param message Requries a message as {@link Component}
+     * @param player Requires a {@link Player}
+     * @param message Requires a message as {@link Component}
      */
     public void kickMessage(@NotNull Player player , Component message){
         player.kick(message);
@@ -233,11 +233,11 @@ public class MessageBuilder {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V.1.0.0
+     * @version V.1.0.0
      * @description kick a player with a message and a cause
-     * @param player Requries a {@link Player}
-     * @param message Requries a message as {@link Component}
+     * @param player Requires a {@link Player}
+     * @param message Requires a message as {@link Component}
      * @param cause Requires a cause for the kick ({@link PlayerKickEvent.Cause})
      */
     public void kickMessage(@NotNull Player player , Component message , PlayerKickEvent.Cause cause) {
@@ -246,11 +246,11 @@ public class MessageBuilder {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V.1.0.0
+     * @version V.1.0.0
      * @description kick a player with a message and in a new line a cause
-     * @param player Requries a {@link Player}
-     * @param message Requries a message as {@link Component}
+     * @param player Requires a {@link Player}
+     * @param message Requires a message as {@link Component}
      * @param cause Requires a cause for the kick ({@link Component})
      */
     public void kickMessage(@NotNull Player player , Component message , Component cause){
@@ -259,11 +259,11 @@ public class MessageBuilder {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V.1.0.0
+     * @version V.1.0.0
      * @description kick a player with a message
-     * @param player Requries a {@link Player}
-     * @param message Requries a message as {@link String}
+     * @param player Requires a {@link Player}
+     * @param message Requires a message as {@link String}
      */
     public void kickMessage(@NotNull Player player , String message){
         player.kick(miniMessage.deserialize(message));
@@ -271,11 +271,11 @@ public class MessageBuilder {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V.1.0.0
+     * @version V.1.0.0
      * @description kick a player with a message and a cause
-     * @param player Requries a {@link Player}
-     * @param message Requries a message as {@link Component}
+     * @param player Requires a {@link Player}
+     * @param message Requires a message as {@link Component}
      * @param cause Requires a cause for the kick ({@link PlayerKickEvent.Cause})
      */
     public void kickMessage(@NotNull Player player , String message , PlayerKickEvent.Cause cause) {
@@ -284,11 +284,11 @@ public class MessageBuilder {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V.1.0.0
+     * @version V.1.0.0
      * @description kick a player with a message and in a new line a cause
-     * @param player Requries a {@link Player}
-     * @param message Requries a message as {@link Component}
+     * @param player Requires a {@link Player}
+     * @param message Requires a message as {@link Component}
      * @param cause Requires a cause for the kick ({@link Component})
      */
     public void kickMessage(@NotNull Player player, String message , Component cause){
@@ -297,10 +297,10 @@ public class MessageBuilder {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V.1.0.0
+     * @version V.1.0.0
      * @description log an information in the console
-     * @param message Requries a message as {@link String}
+     * @param message Requires a message as {@link String}
      */
     public void infoLog(String message){
         logger.info(prefix.infoPrefix() + message);
@@ -308,10 +308,10 @@ public class MessageBuilder {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V.1.0.0
+     * @version V.1.0.0
      * @description log a warning in the console
-     * @param message Requries a message as {@link String}
+     * @param message Requires a message as {@link String}
      */
     public void warningLog(String message){
         logger.warning(prefix.warningPrefix() + message);
@@ -319,10 +319,10 @@ public class MessageBuilder {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V.1.0.0
+     * @version V.1.0.0
      * @description log an error in the console
-     * @param message Requries a message as {@link String}
+     * @param message Requires a message as {@link String}
      */
     public void errorLog(String message){
         logger.severe(prefix.errorPrefix() + message);
@@ -330,11 +330,11 @@ public class MessageBuilder {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V.1.0.0
+     * @version V.1.0.0
      * @description log in the console
      * @param level Requires the log level
-     * @param message Requries a message as {@link String}
+     * @param message Requires a message as {@link String}
      */
     public void log(Level level , String message){
         logger.log(level , message);
@@ -342,8 +342,8 @@ public class MessageBuilder {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V.1.0.0
+     * @version V.1.0.0
      * @description gets the logger
      * @return {@link Logger}
      */
@@ -354,8 +354,8 @@ public class MessageBuilder {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V.1.0.0
+     * @version V.1.0.0
      * @description Set a command permission message
      * @param command Requires the Command
      * @param message Requires the Message
@@ -367,10 +367,10 @@ public class MessageBuilder {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V.1.0.0
+     * @version V.1.0.0
      * @description Send a message to a {@link Player}
-     * @param message Requries a message as {@link Component}
+     * @param message Requires a message as {@link Component}
      */
     public void message(@NotNull Player player , Component message){
         player.sendMessage(message);
@@ -378,10 +378,10 @@ public class MessageBuilder {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V.1.0.0
+     * @version V.1.0.0
      * @description Send a message to a {@link Player} with prefix
-     * @param message Requries a message as {@link Component}
+     * @param message Requires a message as {@link Component}
      */
     public void messageWithPrefix(@NotNull Player player , Component message){
         player.sendMessage(prefix.prefix().append(message));
@@ -389,10 +389,10 @@ public class MessageBuilder {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V.1.0.0
+     * @version V.1.0.0
      * @description Send a message to a {@link Player}
-     * @param message Requries a message as {@link String}
+     * @param message Requires a message as {@link String}
      */
     public void message(@NotNull Player player , String message){
         player.sendMessage(miniMessage.deserialize(message));
@@ -400,10 +400,10 @@ public class MessageBuilder {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V.1.0.0
+     * @version V.1.0.0
      * @description Send a message to a {@link Player} with prefix
-     * @param message Requries a message as {@link String}
+     * @param message Requires a message as {@link String}
      */
     public void messageWithPrefix(@NotNull Player player , String message){
         player.sendMessage(miniMessage.deserialize(prefix.prefix() + message));
@@ -411,10 +411,10 @@ public class MessageBuilder {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V.1.0.0
+     * @version V.1.0.0
      * @description Send a message to a {@link CommandSender}
-     * @param message Requries a message as {@link Component}
+     * @param message Requires a message as {@link Component}
      */
     public void message(@NotNull CommandSender sender , Component message){
         sender.sendMessage(message);
@@ -422,10 +422,10 @@ public class MessageBuilder {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V.1.0.0
+     * @version V.1.0.0
      * @description Send a message to a {@link CommandSender} with Prefix
-     * @param message Requries a message as {@link Component}
+     * @param message Requires a message as {@link Component}
      */
     public void messageWithPrefix(@NotNull CommandSender sender , Component message){
         sender.sendMessage(prefix.prefix().append(message));
@@ -433,10 +433,10 @@ public class MessageBuilder {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V.1.0.0
+     * @version V.1.0.0
      * @description Send a message to a {@link CommandSender}
-     * @param message Requries a message as {@link String}
+     * @param message Requires a message as {@link String}
      */
     public void message(@NotNull CommandSender sender , String message){
         sender.sendMessage(miniMessage.deserialize(message));
@@ -444,10 +444,10 @@ public class MessageBuilder {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V.1.0.0
+     * @version V.1.0.0
      * @description Send a message to a {@link CommandSender} with Prefix
-     * @param message Requries a message as {@link String}
+     * @param message Requires a message as {@link String}
      */
     public void messageWithPrefix(@NotNull CommandSender sender , String message){
         sender.sendMessage(miniMessage.deserialize(prefix.prefix() + message));
@@ -461,11 +461,11 @@ public class MessageBuilder {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V.1.0.0
+     * @version V.1.0.0
      * @description write a message gradient
-     * @param ofColor Requrires the Color 1
-     * @param toColor Requrires the Color 2
+     * @param ofColor Requires the Color 1
+     * @param toColor Requires the Color 2
      * @param message Requires the Message
      * @return {@link Component}
      */
@@ -476,8 +476,8 @@ public class MessageBuilder {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V.1.0.0
+     * @version V.1.0.0
      * @description create a hover text
      * @param textToShow the message to show if the player hover
      * @param message Requires a message
@@ -490,8 +490,8 @@ public class MessageBuilder {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V.1.0.0
+     * @version V.1.0.0
      * @description write a black message
      * @param message Requires a message
      * @return {@link Component}
@@ -503,8 +503,8 @@ public class MessageBuilder {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V.1.0.0
+     * @version V.1.0.0
      * @description write a dark blue message
      * @param message Requires a message
      * @return {@link Component}
@@ -516,8 +516,8 @@ public class MessageBuilder {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V.1.0.0
+     * @version V.1.0.0
      * @description write a dark green message
      * @param message Requires a message
      * @return {@link Component}
@@ -529,8 +529,8 @@ public class MessageBuilder {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V.1.0.0
+     * @version V.1.0.0
      * @description write a dark aqua message
      * @param message Requires a message
      * @return {@link Component}
@@ -542,8 +542,8 @@ public class MessageBuilder {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V.1.0.0
+     * @version V.1.0.0
      * @description write a dark red message
      * @param message Requires a message
      * @return {@link Component}
@@ -555,8 +555,8 @@ public class MessageBuilder {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V.1.0.0
+     * @version V.1.0.0
      * @description write a dark purple message
      * @param message Requires a message
      * @return {@link Component}
@@ -568,8 +568,8 @@ public class MessageBuilder {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V.1.0.0
+     * @version V.1.0.0
      * @description write a dark gray message
      * @param message Requires a message
      * @return {@link Component}
@@ -581,8 +581,8 @@ public class MessageBuilder {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V.1.0.0
+     * @version V.1.0.0
      * @description write a gold message
      * @param message Requires a message
      * @return {@link Component}
@@ -594,8 +594,8 @@ public class MessageBuilder {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V.1.0.0
+     * @version V.1.0.0
      * @description write a gray message
      * @param message Requires a message
      * @return {@link Component}
@@ -607,8 +607,8 @@ public class MessageBuilder {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V.1.0.0
+     * @version V.1.0.0
      * @description write a blue message
      * @param message Requires a message
      * @return {@link Component}
@@ -620,8 +620,8 @@ public class MessageBuilder {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V.1.0.0
+     * @version V.1.0.0
      * @description write a green message
      * @param message Requires a message
      * @return {@link Component}
@@ -632,8 +632,8 @@ public class MessageBuilder {
     }
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V.1.0.0
+     * @version V.1.0.0
      * @description write a blue message
      * @param message Requires a message
      * @return {@link Component}
@@ -645,8 +645,8 @@ public class MessageBuilder {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V.1.0.0
+     * @version V.1.0.0
      * @description write a red message
      * @param message Requires a message
      * @return {@link Component}
@@ -658,8 +658,8 @@ public class MessageBuilder {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V.1.0.0
+     * @version V.1.0.0
      * @description write a light purple message
      * @param message Requires a message
      * @return {@link Component}
@@ -671,8 +671,8 @@ public class MessageBuilder {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V.1.0.0
+     * @version V.1.0.0
      * @description write a yellow message
      * @param message Requires a message
      * @return {@link Component}
@@ -684,8 +684,8 @@ public class MessageBuilder {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V.1.0.0
+     * @version V.1.0.0
      * @description write a white message
      * @param message Requires a message
      * @return {@link Component}
@@ -697,8 +697,8 @@ public class MessageBuilder {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V.1.0.0
+     * @version V.1.0.0
      * @description write a bold message
      * @param message Requires a message
      * @return {@link Component}
@@ -710,8 +710,8 @@ public class MessageBuilder {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V.1.0.0
+     * @version V.1.0.0
      * @description write an italic message
      * @param message Requires a message
      * @return {@link Component}
@@ -723,8 +723,8 @@ public class MessageBuilder {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V.1.0.0
+     * @version V.1.0.0
      * @description write a underlined message
      * @param message Requires a message
      * @return {@link Component}
@@ -736,8 +736,8 @@ public class MessageBuilder {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V.1.0.0
+     * @version V.1.0.0
      * @description write a strikethrough message
      * @param message Requires a message
      * @return {@link Component}
@@ -749,8 +749,8 @@ public class MessageBuilder {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V.1.0.0
+     * @version V.1.0.0
      * @description write an obfuscated message
      * @param message Requires a message
      * @return {@link Component}

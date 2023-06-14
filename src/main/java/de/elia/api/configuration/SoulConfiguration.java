@@ -37,11 +37,11 @@ import java.util.Map;
 import java.util.Set;
 
 /**
- * @author - Elia
- * @since - V. 1.0
- * @version - V. 1.0
- * @description - This class is a huge collection of all configuration file functions. Here are methods to
- *                create and store and read values.
+ * @author Elia
+ * @since V. 1.0.0
+ * @version V. 1.0.0
+ * @description This class is a huge collection of all configuration file functions. Here are methods to
+ *              create and store and read values.
  */
 public class SoulConfiguration {
 
@@ -55,8 +55,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Create a configuration file.
      * @param plugin Requires the instance of the Main class.
      * @param name Requires a name for the file.
@@ -67,8 +67,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Create a configuration file.
      * @param plugin Requires the instance of the Main class.
      * @param name Requires a name for the file.
@@ -80,8 +80,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Create a configuration file.
      * @param plugin Requires the instance of the Main class.
      * @param name Requires a name for the file.
@@ -94,8 +94,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Create a configuration file.
      * @param plugin Requires the instance of the Main class.
      * @param name Requires a name for the file.
@@ -125,8 +125,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Create a configuration file.
      * @param plugin Requires the instance of the Main class.
      * @param name Requires a name for the file.
@@ -139,8 +139,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Create a configuration file.
      * @param plugin Requires the instance of the Main class.
      * @param name Requires a name for the file.
@@ -180,8 +180,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Create a configuration file.
      * @param plugin Requires the instance of the Main class.
      * @param pathName Requires a file path.
@@ -213,8 +213,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Create a configuration file.
      * @param plugin Requires the instance of the Main class.
      * @param pathName Requires a file path.
@@ -227,8 +227,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Create a configuration file.
      * @param plugin Requires the instance of the Main class.
      * @param pathName Requires a file path.
@@ -270,8 +270,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Reloads the configuration.
      * @return {@link YamlConfiguration}
      */
@@ -293,8 +293,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Loads the file.
      * @param file Requires the file.
      */
@@ -309,8 +309,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Loads the file.
      * @param file Requires the file.
      */
@@ -325,8 +325,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Loads the reader.
      * @param reader Requires the reader.
      */
@@ -341,8 +341,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Loads the configuration.
      * @param file Requires the file.
      * @return {@link YamlConfiguration}
@@ -356,8 +356,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Loads the configuration.
      * @param reader Requires the reader.
      * @return {@link YamlConfiguration}
@@ -370,8 +370,8 @@ public class SoulConfiguration {
     }
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Loads the configuration from a string.
      * @param content Requires the String.
      */
@@ -386,8 +386,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Save the configuration from a String.
      * @return {@link String}
      */
@@ -400,8 +400,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Save the Configuration.
      */
     public void save(){
@@ -414,8 +414,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Save the Configuration.
      * @param file Requires the file.
      */
@@ -429,8 +429,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Save the Configuration.
      * @param file Requires the file.
      */
@@ -444,8 +444,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Sets the defaults to false.
      */
     public void setDefaults(){
@@ -454,8 +454,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description - Sets the defaults settings.
      * @param replace Requires true or false.
      */
@@ -483,8 +483,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Sets the default settings.
      * @param defaults Requires the default settings.
      */
@@ -495,8 +495,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Adds the default settings.
      * @param path Requires the path where to save it.
      * @param value Requires the {@link Object} to be stored.
@@ -508,8 +508,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Adds the default settings.
      * @param defaults Requires the path and the {@link Object} in a {@link Map}.
      *                 The map looks like this: {@link Map<String, Object>}
@@ -521,8 +521,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Adds the default settings.
      * @param defaults Requires the default settings.
      */
@@ -533,8 +533,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Gets the default settings.
      * @return {@link Configuration}
      */
@@ -545,8 +545,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description If the value is true, the default values are loaded into the target configuration.
      * @param value Requires true or false.
      */
@@ -557,8 +557,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Gets the copy default settings.
      * @return {@link Boolean}
      */
@@ -569,8 +569,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Get the copy default value.
      * @return {@link Boolean}
      */
@@ -581,8 +581,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Set a Header.
      * @param value Requires a List of Strings.
      * @return {@link YamlConfigurationOptions}
@@ -596,8 +596,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Set a Header.
      * @param values Requires multiple String.
      * @return {@link YamlConfigurationOptions}
@@ -613,8 +613,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Gets the Header.
      * @return {@link List<String>}
      */
@@ -625,8 +625,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Sets a Footer.
      * @param value Requires a List of Strings.
      * @return {@link YamlConfigurationOptions}
@@ -640,8 +640,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Sets a Footer.
      * @param values Requires multiple Strings.
      * @return {@link YamlConfigurationOptions}
@@ -657,8 +657,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Gets a Footer.
      * @return {@link List<String>}
      */
@@ -669,8 +669,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Set comments in the path.
      * @param path Requires the path.
      * @param comments Requires the comments in a {@link String} {@link List}.
@@ -682,8 +682,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Set comments in the path.
      * @param path Requires the path.
      * @param comments Requires the comments in multiple {@link String}s.
@@ -697,8 +697,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Gets the comments in a specific path.
      * @param path Requires the path
      * @return {@link List<String>}
@@ -710,8 +710,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Set inline comments in the path.
      * @param path Requires the path.
      * @param comments Requires the inline comments in a {@link String} {@link List}.
@@ -723,8 +723,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Set inline comments in the path.
      * @param path Requires the path.
      * @param comments Requires the inline comments in multiple {@link String}s.
@@ -738,8 +738,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Gets the comments in a specific path.
      * @param path Requires the path.
      * @return {@link List<String>}
@@ -751,8 +751,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Set parse comments.
      * @param value Requires true or false.
      * @return {@link YamlConfiguration}
@@ -764,8 +764,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Set parse comments.
      * @param value Requires true or false.#
      * @return {@link YamlConfigurationOptions}
@@ -779,8 +779,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Get parse comments.
      * @return {@link SoulConfiguration#parseComments()}
      */
@@ -791,8 +791,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Get parse comments.
      * @return {@link Boolean}
      */
@@ -803,8 +803,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Save an indent in the configuration.
      * @param indent Requires the indent.
      * @return {@link YamlConfigurationOptions}
@@ -818,8 +818,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Gets the indent.
      * @return {@link Integer}
      */
@@ -829,8 +829,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Save a width in the configuration.
      * @param width Requires the width.
      * @return {@link YamlConfigurationOptions}
@@ -844,8 +844,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Gets the width.
      * @return {@link Integer}
      */
@@ -855,8 +855,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Set a path separator.
      * @param separator Requires a separator
      * @return {@link YamlConfigurationOptions}
@@ -870,8 +870,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Gets the path separator.
      * @return {@link YamlConfigurationOptions#pathSeparator()}
      */
@@ -881,8 +881,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Clear all {@link Map}s in the section.
      */
     public void clear(){
@@ -891,8 +891,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Clear a Map.
      * @param deep Requires a {@link Boolean}
      */
@@ -906,8 +906,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Clear a specify path.
      * @param path Requires the path.
      */
@@ -918,8 +918,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Create a path.
      * @param section Requires a {@link ConfigurationSection}
      * @param pathName Requires the path name.
@@ -934,8 +934,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Create a path.
      * @param section Requires a {@link ConfigurationSection}
      * @param pathName Requires the path name.
@@ -951,8 +951,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Gets the current path
      * @return {@link String}
      */
@@ -963,8 +963,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Queries what was set in the path
      * @param path Requires the path.
      * @return {@link Boolean}
@@ -976,8 +976,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Queries a {@link String} has been set.
      * @param path Requires the path.
      * @return {@link Boolean}
@@ -989,8 +989,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Gets a specify path.
      * @param path Requires the path.
      * @return {@link SoulConfiguration#getString(String)}
@@ -1001,8 +1001,8 @@ public class SoulConfiguration {
     }
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Gets a {@link String} from a specify path.
      * @param path Requires the path.
      * @return {@link String}
@@ -1014,8 +1014,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Gets a specify {@link String} from a specify path.
      * @param path Requires the path.
      * @param string Requires the string.
@@ -1028,8 +1028,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Create a section in a specify path.
      * @param path Requires the path.
      * @return {@link ConfigurationSection}
@@ -1043,8 +1043,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Creates a section as a {@link Map} with two objects in a specified path.
      * @param path Requires the path.
      * @param values Requires the values of your Map.
@@ -1059,8 +1059,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Queries a configuration section is set in a specify path.
      * @param path Requires the path.
      * @return {@link Boolean}
@@ -1072,8 +1072,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Gets the configuration section on a specify path.
      * @param path Requires the path.
      * @return {@link ConfigurationSection}
@@ -1085,8 +1085,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Gets the default section.
      * @return {@link ConfigurationSection}
      */
@@ -1097,8 +1097,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Gets the parents
      * @return {@link ConfigurationSection}
      */
@@ -1109,8 +1109,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Set a {@link Object} in the configuration.
      * @param path Requires the path.
      * @param value Requires the {@link Object}.
@@ -1122,8 +1122,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Asks if there is anything in the path.
      * @param path Requires the path.
      * @return {@link Boolean}
@@ -1135,8 +1135,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Gets a specify path.
      * @param path Requires the path.
      * @return {@link Object}
@@ -1148,8 +1148,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @versionV. 1.0.0
      * @description Gets a {@link Object} on a specify path.
      * @param path Requires the path.
      * @param value Requires the {@link Object}.
@@ -1162,8 +1162,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Gets a {@link Boolean} in specify path.
      * @param path Requires the path.
      * @param value Requires true or false.
@@ -1175,8 +1175,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Gets a {@link Object} on a specify path.
      * @param path Requires the path.
      * @param value Requires the {@link Object}.
@@ -1189,8 +1189,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Gets all keys on the section.
      * @return {@link Set<String>}
      */
@@ -1201,8 +1201,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Gets all keys on the section if {@link boolean} true.
      * @param deep Requires true or false.
      * @return {@link Set<String>}
@@ -1214,8 +1214,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Gets all Values.
      * @return {@link SoulConfiguration#getValues(Boolean)}
      */
@@ -1226,8 +1226,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Gets all values if {@link boolean} true.
      * @param deep Requires true or false.
      * @return {@link SoulConfiguration#getValues(Boolean)}
@@ -1239,8 +1239,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Asks if a boolean was stored in the path.
      * @param path Requires the path.
      * @return {@link Boolean}
@@ -1251,8 +1251,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Gets a specify {@link boolean} on a specify path.
      * @param path Requires the path.
      * @param value Requires true or false.
@@ -1265,8 +1265,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Gets a boolean list from a specify path.
      * @param path Requires the path.
      * @return {@link List<Boolean>}
@@ -1278,8 +1278,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Asks if an {@link int} was stored in the path.
      * @param path Requires the path.
      * @return {@link Boolean}
@@ -1291,8 +1291,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Gets all {@link int} in a specify Path
      * @param path Requires the path.
      * @return {@link Integer}
@@ -1304,8 +1304,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Gets a specify {@link int} in specify path.
      * @param path Requires the path.
      * @param value Requires a {@link int}.
@@ -1318,8 +1318,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Gets a {@link Integer} {@link List} from a specify path.
      * @param path Requires the path.
      * @return {@link List<Integer>}
@@ -1331,8 +1331,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Asks if a {@link long} was stored in the path.
      * @param path Requires the path.
      * @return {@link Boolean}
@@ -1344,8 +1344,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Gets a {@link Long} on a specify path
      * @param path Requires the path.
      * @return {@link Long}
@@ -1357,8 +1357,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Gets a specify {@link long} in a specify path.
      * @param path Requires the path.
      * @param value Requires a {@link long}.
@@ -1371,8 +1371,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Gets a {@link Long} {@link List} from a specify path.
      * @param path Requires the path.
      * @return {@link List<Long>}
@@ -1384,8 +1384,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Asks if a {@link Double} was stored in the path.
      * @param path Requires the path.
      * @return {@link Double}
@@ -1397,8 +1397,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Gets a {@link Double} from a specify path.
      * @param path Requires the path.
      * @return {@link Double}
@@ -1410,8 +1410,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Gets a specify {@link Double} from a specify path.
      * @param path Requires the path.
      * @param value Requires a {@link Double}.
@@ -1424,8 +1424,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Gets a {@link Double} {@link List}.
      * @param path Requires the path.
      * @return {@link List<Double>}
@@ -1437,8 +1437,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Gets a {@link Float} {@link List}.
      * @param path Requires the path.
      * @return {@link List<Float>}
@@ -1450,8 +1450,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Gets a {@link Short} {@link List}.
      * @param path Requires the path.
      * @return {@link List<Short>}
@@ -1463,8 +1463,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Gets a {@link Byte} {@link List}.
      * @param path Requires the path.
      * @return {@link List<Byte>}
@@ -1476,8 +1476,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Gets a {@link Character} {@link List}.
      * @param path Requires the path.
      * @return {@link List<Character>}
@@ -1489,8 +1489,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description  Asks if a {@link List<?>} was stored in the path.
      * @param path Requires the path.
      * @return {@link Boolean}
@@ -1502,8 +1502,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Gets a {@link List<?>} from a specify path.
      * @param path Requires the path.
      * @return {@link List<?>}
@@ -1515,8 +1515,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Gets a specify {@link List<?>} from a specify path.
      * @param path Requires the path.
      * @param value Requires the {@link List<?>}.
@@ -1529,8 +1529,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Gets a {@link List} of {@link Map<?, ?>}s from a specify path.
      * @param path Requires the path.
      * @return {@link Map<?, ?>}
@@ -1542,8 +1542,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Asks if a {@link OfflinePlayer} was stored in the path.
      * @param path Requires the path.
      * @return {@link Boolean}
@@ -1555,8 +1555,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Gets a {@link OfflinePlayer}.
      * @param path Requires the path.
      * @return {@link OfflinePlayer}
@@ -1568,8 +1568,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Gets a specify {@link OfflinePlayer} in a specify path.
      * @param path Requires the path.
      * @param def Requires the {@link OfflinePlayer}
@@ -1582,8 +1582,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Asks if a {@link ItemStack} was stored in the path.
      * @param path Requires the path.
      * @return {@link Boolean}
@@ -1595,8 +1595,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Gets a {@link ItemStack} on a specify path.
      * @param path Requires the path.
      * @return {@link ItemStack}
@@ -1608,8 +1608,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Gets a specify {@link ItemStack} on a specify path.
      * @param path Requires the path.
      * @param value Requires the {@link ItemStack}.
@@ -1622,8 +1622,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Asks if a {@link Location} was stored in the path.
      * @param path Requires the path.
      * @return {@link Boolean}
@@ -1635,8 +1635,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Gets a {@link Location} from a specify path.
      * @param path Requires the path.
      * @return {@link Location}
@@ -1648,8 +1648,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Gets a specify {@link Location} from a specify path.
      * @param path Requires the path.
      * @param location Requires the {@link Location}.
@@ -1662,8 +1662,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Asks if a {@link Vector} was stored in the path.
      * @param path Requires the path.
      * @return {@link Boolean}
@@ -1675,8 +1675,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Gets a {@link Vector} from a specify path.
      * @param path Requires the path.
      * @return {@link Vector}
@@ -1688,8 +1688,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Gets a specify {@link Vector} from a specify path.
      * @param path Requires the path.
      * @param value Requires the {@link Vector}
@@ -1702,8 +1702,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Queries if a color is stored in the path.
      * @param path Requires the path.
      * @return {@link Boolean}
@@ -1715,8 +1715,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Gets the colors in a specify path.
      * @param path Requires the path.
      * @param value Requires the color.
@@ -1729,8 +1729,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Gets the configuration name.
      * @return {@link SoulConfiguration#getConfigurationName()}
      */
@@ -1741,8 +1741,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description - Gets the configuration name.
      * @return {@link YamlConfiguration#getName()}
      */
@@ -1753,8 +1753,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Gets the options from the configuration.
      * @return {@link SoulConfiguration#getOptions()}
      */
@@ -1765,8 +1765,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Gets the options from the configuration.
      * @return {@link YamlConfiguration#options()}
      */
@@ -1777,8 +1777,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Gets the file.
      * @return {@link File}
      */
@@ -1789,8 +1789,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Gets the file path.
      * @return {@link String}
      */
@@ -1801,8 +1801,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Gets the file name.
      * @return {@link String}
      */
@@ -1813,8 +1813,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Gets the path name.
      * @return {@link String}
      */
@@ -1825,8 +1825,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Gets a configuration.
      * @return {@link YamlConfiguration}
      */
@@ -1837,8 +1837,8 @@ public class SoulConfiguration {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V. 1.0.0
+     * @version V. 1.0.0
      * @description Sets a configuration.
      * @param configuration Requires the configuration
      */

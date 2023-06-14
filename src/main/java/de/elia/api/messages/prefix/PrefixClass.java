@@ -8,8 +8,8 @@ import java.lang.String;
 
 /**
  * @author Elia
- * @since V. 1.0
- * @version V. 1.0
+ * @since V.1.0.0
+ * @version V.1.0.0
  * @description Creates all the prefixes you need.
  */
 public class PrefixClass {
@@ -22,8 +22,8 @@ public class PrefixClass {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V.1.0.0
+     * @version V.1.0.0
      * @description a prefix for the in game chat
      * @return {@link Component}
      */
@@ -34,8 +34,8 @@ public class PrefixClass {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V.1.0.0
+     * @version V.1.0.0
      * @description a prefix for error messages in the console
      * @return {@link Component}
      */
@@ -46,8 +46,8 @@ public class PrefixClass {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V.1.0.0
+     * @version V.1.0.0
      * @description a prefix for warning messages in the console
      * @return {@link Component}
      */
@@ -58,8 +58,8 @@ public class PrefixClass {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V.1.0.0
+     * @version V.1.0.0
      * @description a prefix for info messages in the console
      * @return {@link Component}
      */

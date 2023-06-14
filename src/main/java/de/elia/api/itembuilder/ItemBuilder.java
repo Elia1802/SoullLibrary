@@ -28,8 +28,8 @@ public class ItemBuilder {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V.1.0.0
+     * @version V.1.0.0
      * @description Create a new Item
      */
     public ItemBuilder(Material material){
@@ -39,8 +39,8 @@ public class ItemBuilder {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V.1.0.0
+     * @version V.1.0.0
      * @description Give the Item a Name
      * @param name Requires the Name
      * @return {@link ItemBuilder}
@@ -53,8 +53,8 @@ public class ItemBuilder {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V.1.0.0
+     * @version V.1.0.0
      * @description Give the Item a lore
      * @param lore Requires the lore
      * @return {@link ItemBuilder}
@@ -67,8 +67,8 @@ public class ItemBuilder {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V.1.0.0
+     * @version V.1.0.0
      * @description Give the Item a lore
      * @param lore Requires the lore
      * @return {@link ItemBuilder}
@@ -81,10 +81,10 @@ public class ItemBuilder {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V.1.0.0
+     * @version V.1.0.0
      * @description Set the Amount of Items
-     * @param amount Requires the amount of Itemms
+     * @param amount Requires the amount of Items
      * @return {@link ItemBuilder}
      */
     @NotNull
@@ -95,8 +95,8 @@ public class ItemBuilder {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V.1.0.0
+     * @version V.1.0.0
      * @description Enchanted the Item
      * @param enchantment Requires the Enchantment
      * @param level Requires the Level
@@ -109,8 +109,8 @@ public class ItemBuilder {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V.1.0.0
+     * @version V.1.0.0
      * @description Set the Item unbreakable
      * @param value Requires a true or false
      * @return {@link ItemBuilder}
@@ -123,8 +123,8 @@ public class ItemBuilder {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V.1.0.0
+     * @version V.1.0.0
      * @description set the Item flags
      * @param itemFlags Requires ItemFlags
      * @return {@link ItemBuilder}
@@ -137,8 +137,8 @@ public class ItemBuilder {
 
     /**
      * @author Elia
-     * @since V. 1.0
-     * @version V. 1.0
+     * @since V.1.0.0
+     * @version V.1.0.0
      * @description Create the Item
      * @return {@link ItemStack}
      */
