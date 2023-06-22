@@ -1,19 +1,21 @@
 package de.elia.api;
 
-import de.elia.api.logging.PluginLogger;
 import de.elia.api.thezepserapi.components.DamageBlocked;
 import de.elia.api.thezepserapi.components.FlightBlocked;
 import de.elia.api.thezepserapi.spells.spells.gravitation.GRAVITATION_SUPER;
 import de.elia.api.thezepserapi.spells.spells.weather.WEATHER_DEFENSE;
 import de.elia.api.thezepserapi.spells.spells.weather.WEATHER_SUPER;
 import org.bukkit.Bukkit;
+import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.jetbrains.annotations.NotNull;
 
+import java.util.logging.Logger;
+
 public class Main extends JavaPlugin {
 
-   private static Main soulMain;
-   private final PluginLogger logger = new PluginLogger("Soul-Library");
+   public static Plugin soulMain;
+   private static final Logger logger = Logger.getLogger("Soul-Library");
 
    @Override
    public void onEnable(){
@@ -37,13 +39,13 @@ public class Main extends JavaPlugin {
     * @description the instance of this plugin
     */
    @NotNull
-   public static Main soulMain() {
+   public static Plugin soulMain() {
       return soulMain;
    }
 
    @NotNull
-   public PluginLogger logger(){
-      return this.logger;
+   public static Logger logger(){
+      return logger;
    }
 
 }

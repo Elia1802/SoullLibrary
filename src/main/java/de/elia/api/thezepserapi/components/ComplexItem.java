@@ -164,7 +164,7 @@ public class ComplexItem implements Cloneable {
   public ComplexItem setKey(Complex key) {
     ItemMeta meta = this.ITEM.getItemMeta();
     this.COMPLEX = key;
-    meta.getPersistentDataContainer().set(new NamespacedKey(Main.soulMain(), TheZepserAPI.item.createKey(key)), PersistentDataType.DOUBLE, Math.PI);
+    meta.getPersistentDataContainer().set(new NamespacedKey(Main.soulMain, TheZepserAPI.item.createKey(key)), PersistentDataType.DOUBLE, Math.PI);
     this.ITEM.setItemMeta(meta);
     return this;
   }

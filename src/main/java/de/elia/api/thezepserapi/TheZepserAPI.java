@@ -32,7 +32,7 @@ public interface TheZepserAPI {
 
   Component Prefix= new PrefixClass().prefix();
   static void indicator(int number) {
-    Main.soulMain().logger().logInfo("Indicator: "+number);
+    Main.logger().info("Indicator: " + number);
   }
 
   class region {

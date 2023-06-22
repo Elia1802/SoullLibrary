@@ -1,0 +1,9 @@
+name: SoulLibrary
+main: de.elia.api.Main
+version: '2.0.1'
+api-version: '1.20'
+bootstrapper: de.elia.api.BootsTrapper
+loader: de.elia.api.Loader
+load-before:
+  - name: SoulBossSystem
+    bootstrap: true
