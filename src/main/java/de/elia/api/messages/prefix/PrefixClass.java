@@ -29,7 +29,7 @@ public class PrefixClass {
      */
     @NotNull
     public Component prefix(){
-        return miniMessage.deserialize("<dark_gray>[</dark_gray><dark_purple>SoulSMP</dark_purple><dark_gray>]</dark_gray> ");
+        return miniMessage.deserialize("<dark_grey>[<#9545a3>SoulSMP</#9545a3>]</dark_grey> ");
     }
 
     /**

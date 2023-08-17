@@ -2,6 +2,7 @@ package de.elia.api.timing;
 
 import org.bukkit.Location;
 import org.bukkit.entity.Player;
+import org.bukkit.plugin.Plugin;
 import org.jetbrains.annotations.NotNull;
 
 /**
@@ -21,14 +22,14 @@ public class StartTasks {
    * @param player Requires a {@link Player}
    * @param location Requires a {@link Location}
    */
-  public void start(int time, @NotNull Player player, Location location){
+  public void start(int time, @NotNull Player player, Location location, Plugin plugin){
     TimerUtils.countdownAndRun(time,
       new Runnable() {
         @Override
         public void run() {
 
         }
-      }
+      }, plugin
     );
     TimerUtils.countdownInterval(time,
       new TimerUtils.TimeRunnable() {
@@ -45,7 +46,7 @@ public class StartTasks {
         public void run() {
           //if countdown 0 run this
         }
-      }
+      }, plugin
     );
   }
 

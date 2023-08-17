@@ -1,4 +1,4 @@
-package de.elia.api.logging;
+package de.elia.api.logging.error;
 
 import de.elia.api.configuration.SoulConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;

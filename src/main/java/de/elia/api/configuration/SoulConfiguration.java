@@ -1149,6 +1149,39 @@ public class SoulConfiguration {
     /**
      * @author Elia
      * @since V. 1.0.0
+     * @version V. 1.0.0
+     * @param path Requires the path
+     * @param def Requires the boolean
+     * @return the boolean of the config or false if not a boolean in the config
+     */
+    public boolean checkBoolean(String path, boolean def) {
+        if (this.isBoolean(path)) {
+            boolean b = this.getBoolean(path, def);
+            if (b) {
+                return true;
+            }else return false;
+        }return false;
+    }
+
+    /**
+     * @author Elia
+     * @since V. 1.0.0
+     * @version V. 1.0.0
+     * @param path Requires the path
+     * @return the boolean of the config or false if not a boolean in the config
+     */
+    public boolean checkBoolean(String path) {
+        if (this.isBoolean(path)) {
+            boolean b = this.getBoolean(path, false);
+            if (b) {
+                return true;
+            }else return false;
+        }return false;
+    }
+
+    /**
+     * @author Elia
+     * @since V. 1.0.0
      * @versionV. 1.0.0
      * @description Gets a {@link Object} on a specify path.
      * @param path Requires the path.
