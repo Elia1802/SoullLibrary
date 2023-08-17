@@ -1,6 +1,5 @@
 package de.elia.api.thezepserapi.spells.spells.weather;
 
-import de.elia.api.Main;
 import org.bukkit.Location;
 import org.bukkit.Particle;
 import org.bukkit.Sound;
@@ -8,6 +7,7 @@ import org.bukkit.World;
 import org.bukkit.entity.Illusioner;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
+import org.bukkit.plugin.Plugin;
 import org.bukkit.scheduler.BukkitRunnable;
 import org.bukkit.util.Vector;
 
@@ -17,7 +17,8 @@ public class WEATHER_ATTACK {
   private int COUNT;
   private Location POSITION;
   private Vector DIRECTION;
-public void spawn(Player player, boolean pvp) {
+
+public void spawn(Player player, boolean pvp, Plugin plugin) {
   Collection<Player> players = player.getLocation().getNearbyPlayers(14);
   for (Player player1 : players) {
     player1.playSound(player.getLocation(), Sound.ENTITY_EVOKER_PREPARE_ATTACK, 0.7f, 0.8f);
@@ -74,9 +75,9 @@ public void spawn(Player player, boolean pvp) {
             cancel();
           }
         }
-      }.runTaskTimer(Main.soulMain(), 0L, 0L);
+      }.runTaskTimer(plugin, 0L, 0L);
     }
-  }.runTaskLater(Main.soulMain(), 4L);
+  }.runTaskLater(plugin, 4L);
 }
   
 }

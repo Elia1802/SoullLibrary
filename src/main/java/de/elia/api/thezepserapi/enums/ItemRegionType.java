@@ -1,6 +1,6 @@
 package de.elia.api.thezepserapi.enums;
 
-public enum RegionType {
+public enum ItemRegionType {
   NORMAL,
   GRAVITATION_SUPER,
   GRAVITATION_DEFENSE,

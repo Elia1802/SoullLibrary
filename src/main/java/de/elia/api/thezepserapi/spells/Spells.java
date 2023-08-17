@@ -10,33 +10,34 @@ import de.elia.api.thezepserapi.spells.spells.weather.WEATHER_ATTACK;
 import de.elia.api.thezepserapi.spells.spells.weather.WEATHER_DEFENSE;
 import de.elia.api.thezepserapi.spells.spells.weather.WEATHER_SUPER;
 import org.bukkit.entity.Player;
+import org.bukkit.plugin.Plugin;
 
 public interface Spells {
-  static void FIRE_ATTACK(Player player, boolean pvp) {
-    new FIRE_ATTACK().spawn(player, pvp);
+  static void FIRE_ATTACK(Player player, boolean pvp, Plugin plugin) {
+    new FIRE_ATTACK().spawn(player, pvp, plugin);
   }
-  static void FIRE_DEFENSE(Player player, boolean pvp) {
-    new FIRE_DEFENSE().spawn(player, pvp);
+  static void FIRE_DEFENSE(Player player, boolean pvp, Plugin plugin) {
+    new FIRE_DEFENSE().spawn(player, pvp, plugin);
   }
-  static void FIRE_SUPER(Player player, boolean pvp) {
-    new FIRE_SUPER().spawn(player, pvp);
+  static void FIRE_SUPER(Player player, boolean pvp, Plugin plugin) {
+    new FIRE_SUPER().spawn(player, pvp, plugin);
   }
-  static void WEATHER_ATTACK(Player player, boolean pvp) {
-    new WEATHER_ATTACK().spawn(player, pvp);
+  static void WEATHER_ATTACK(Player player, boolean pvp, Plugin plugin) {
+    new WEATHER_ATTACK().spawn(player, pvp, plugin);
   }
-  static void WEATHER_DEFENSE(Player player, boolean pvp) {
-    new WEATHER_DEFENSE().spawn(player, pvp);
+  static void WEATHER_DEFENSE(Player player, boolean pvp, Plugin plugin) {
+    new WEATHER_DEFENSE().spawn(player, pvp, plugin);
   }
-  static void WEATHER_SUPER(Player player) {
-    new WEATHER_SUPER().spawn(player);
+  static void WEATHER_SUPER(Player player, Plugin plugin) {
+    new WEATHER_SUPER().spawn(player, plugin);
   }
-  static void GRAVITATION_ATTACK(Player player, boolean pvp) {
-    new GRAVITATION_ATTACK().spawn(player, pvp);
+  static void GRAVITATION_ATTACK(Player player, boolean pvp, Plugin plugin) {
+    new GRAVITATION_ATTACK().spawn(player, pvp, plugin);
   }
-  static void GRAVITATION_DEFENSE(Player player, boolean pvp) {
-    new GRAVITATION_DEFENSE(player, pvp);
+  static void GRAVITATION_DEFENSE(Player player, boolean pvp, Plugin plugin) {
+    new GRAVITATION_DEFENSE(player, pvp, plugin);
   }
-  static void GRAVITATION_SUPER(Player player, boolean pvp) {
-    new GRAVITATION_SUPER().spawn(player, pvp);
+  static void GRAVITATION_SUPER(Player player, boolean pvp, Plugin plugin) {
+    new GRAVITATION_SUPER(plugin).spawn(player, pvp);
   }
 }

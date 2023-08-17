@@ -1,17 +1,17 @@
 package de.elia.api.thezepserapi.spells.spells.fire;
 
-import de.elia.api.Main;
 import org.bukkit.Location;
 import org.bukkit.Particle;
 import org.bukkit.Sound;
 import org.bukkit.entity.Player;
+import org.bukkit.plugin.Plugin;
 import org.bukkit.scheduler.BukkitRunnable;
 
 import java.util.Collection;
 
 public class FIRE_DEFENSE {
   private int COUNT;
-  public void spawn(Player player, boolean pvp) {
+  public void spawn(Player player, boolean pvp, Plugin plugin) {
     Collection<Player> players = player.getLocation().getNearbyPlayers(14);
     for (Player player1 : players) {
       player1.playSound(player.getLocation(), Sound.ENTITY_EVOKER_PREPARE_SUMMON, 0.7f, 0.8f);
@@ -53,6 +53,6 @@ public class FIRE_DEFENSE {
           cancel();
         }
       }
-    }.runTaskTimer(Main.soulMain(), 5, 30);
+    }.runTaskTimer(plugin, 5, 30);
   }
 }

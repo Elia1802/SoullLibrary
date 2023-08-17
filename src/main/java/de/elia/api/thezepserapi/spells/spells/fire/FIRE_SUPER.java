@@ -1,13 +1,14 @@
 package de.elia.api.thezepserapi.spells.spells.fire;
 
-import de.elia.api.Main;
 import de.elia.api.thezepserapi.TheZepserAPI;
+import de.elia.api.thezepserapi.components.FlightBlocked;
 import org.bukkit.Location;
 import org.bukkit.Particle;
 import org.bukkit.Sound;
 import org.bukkit.entity.Illusioner;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
+import org.bukkit.plugin.Plugin;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 import org.bukkit.scheduler.BukkitRunnable;
@@ -20,7 +21,7 @@ public class FIRE_SUPER {
   private float COUNT0;
   private HashMap<Float, Location> PARTICLE_LOCATION;
 
-  public void spawn(Player player, boolean pvp) {
+  public void spawn(Player player, boolean pvp, Plugin plugin) {
     PARTICLE_LOCATION = new HashMap<>();
     Collection<LivingEntity> entityCollection = player.getLocation().getNearbyLivingEntities(15);
     Collection<Player> playerCollection = player.getLocation().getNearbyPlayers(15);
@@ -49,7 +50,7 @@ public class FIRE_SUPER {
           player.removePotionEffect(PotionEffectType.LEVITATION);
           player.setAllowFlight(true);
           player.setFlying(true);
-          TheZepserAPI.utilities.setFlightBlocked(player, true);
+          FlightBlocked.set(player, true);
           COUNT0 = 0;
           new BukkitRunnable() {
             public void run() {
@@ -102,17 +103,17 @@ public class FIRE_SUPER {
                     player.removePotionEffect(PotionEffectType.LEVITATION);
                     player.setFlying(false);
                     player.setAllowFlight(false);
-                    TheZepserAPI.utilities.setFlightBlocked(player, false);
+                    FlightBlocked.set(player, false);
                     player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW_FALLING, 20 * 5, 1, false, false, false));
                   }
-                }.runTaskLater(Main.soulMain(), 20);
+                }.runTaskLater(plugin, 20);
                 cancel();
               }
             }
-          }.runTaskTimer(Main.soulMain(), 40, 5);
+          }.runTaskTimer(plugin, 40, 5);
           cancel();
         }
       }
-    }.runTaskTimer(Main.soulMain(), 0, 5);
+    }.runTaskTimer(plugin, 0, 5);
   }
 }

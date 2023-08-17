@@ -1,6 +1,5 @@
 package de.elia.api.thezepserapi.components;
 
-import de.elia.api.Main;
 import de.elia.api.thezepserapi.Complex;
 import de.elia.api.thezepserapi.TheZepserAPI;
 import de.elia.api.thezepserapi.enums.Level;
@@ -20,6 +19,7 @@ import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.persistence.PersistentDataType;
+import org.bukkit.plugin.Plugin;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -161,10 +161,10 @@ public class ComplexItem implements Cloneable {
     this.ITEM.setItemMeta(meta);
     return this;
   }
-  public ComplexItem setKey(Complex key) {
+  public ComplexItem setKey(Complex key, Plugin plugin) {
     ItemMeta meta = this.ITEM.getItemMeta();
     this.COMPLEX = key;
-    meta.getPersistentDataContainer().set(new NamespacedKey(Main.soulMain, TheZepserAPI.item.createKey(key)), PersistentDataType.DOUBLE, Math.PI);
+    meta.getPersistentDataContainer().set(new NamespacedKey(plugin, TheZepserAPI.Item.createKey(key)), PersistentDataType.DOUBLE, Math.PI);
     this.ITEM.setItemMeta(meta);
     return this;
   }

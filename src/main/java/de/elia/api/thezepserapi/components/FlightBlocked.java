@@ -28,7 +28,7 @@ public class FlightBlocked implements Listener {
   @EventHandler
   public void onPlayerMove(PlayerMoveEvent event) {
     Player player = event.getPlayer();
-    if (TheZepserAPI.utilities.getFlightBlocked(player) && player.isFlying()) {
+    if (FlightBlocked.get(player) && player.isFlying()) {
       event.setCancelled(true);
     }
   }

@@ -1,9 +1,8 @@
 package de.elia.api.thezepserapi.spells.spells.weather;
 
-import de.elia.api.Main;
 import de.elia.api.thezepserapi.TheZepserAPI;
-import de.elia.api.thezepserapi.datatypes.Region;
-import de.elia.api.thezepserapi.enums.RegionType;
+import de.elia.api.thezepserapi.datatypes.ItemRegion;
+import de.elia.api.thezepserapi.enums.ItemRegionType;
 import org.bukkit.Location;
 import org.bukkit.Particle;
 import org.bukkit.Sound;
@@ -11,6 +10,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageEvent;
+import org.bukkit.plugin.Plugin;
 import org.bukkit.scheduler.BukkitRunnable;
 
 import java.util.ArrayList;
@@ -18,13 +18,13 @@ import java.util.Collection;
 
 public class WEATHER_DEFENSE implements Listener {
   private int COUNT;
-  private static final Collection<Region> REGIONS = new ArrayList<>();
-  private Region REGION;
+  private static final Collection<ItemRegion> ITEM_REGIONS = new ArrayList<>();
+  private ItemRegion ItemREGION;
 
-  public void spawn(Player player, boolean pvp) {
+  public void spawn(Player player, boolean pvp, Plugin plugin) {
     Location location = player.getLocation();
-    Region region = TheZepserAPI.region.create(player.getLocation(), 6, RegionType.WEATHER_DEFENSE, player, pvp);
-    REGIONS.add(region);
+    ItemRegion itemRegion = TheZepserAPI.Item_Region.create(player.getLocation(), 6, ItemRegionType.WEATHER_DEFENSE, player, pvp);
+    ITEM_REGIONS.add(itemRegion);
     Collection<Player> players = player.getLocation().getNearbyPlayers(14);
     for (Player player1 : players) {
       player1.playSound(player.getLocation(), Sound.ENTITY_EVOKER_PREPARE_SUMMON, 0.7f, 0.8f);
@@ -45,25 +45,25 @@ public class WEATHER_DEFENSE implements Listener {
             location.subtract(x, 0, z);
           }
         } else {
-          REGIONS.remove(region);
+          ITEM_REGIONS.remove(itemRegion);
           cancel();
         }
       }
-    }.runTaskTimer(Main.soulMain(), 5, 20);
+    }.runTaskTimer(plugin, 5, 20);
   }
   @EventHandler
   public void onEvent(EntityDamageEvent event) {
     if (event.getEntity() instanceof Player player) {
-      if (REGIONS != null) {
-        for (Region region : REGIONS) {
-          if (region.getPvP()) {
-            if (event.getEntity() == region.getOwner()) {
+      if (ITEM_REGIONS != null) {
+        for (ItemRegion itemRegion : ITEM_REGIONS) {
+          if (itemRegion.getPvP()) {
+            if (event.getEntity() == itemRegion.getOwner()) {
               player.getLocation().getWorld().spawnParticle(Particle.CAMPFIRE_SIGNAL_SMOKE, player.getLocation(), 4);
               event.setDamage(event.getDamage() / 2);
             }
           }
           else {
-            if (TheZepserAPI.region.containsObject(player, region)) {
+            if (TheZepserAPI.Item_Region.containsObject(player, itemRegion)) {
               player.getLocation().getWorld().spawnParticle(Particle.CAMPFIRE_SIGNAL_SMOKE, player.getLocation(), 4);
               event.setDamage(event.getDamage() / 2);
             }

@@ -1,6 +1,5 @@
 package de.elia.api.thezepserapi.spells.spells.weather;
 
-import de.elia.api.Main;
 import org.bukkit.Location;
 import org.bukkit.Particle;
 import org.bukkit.Sound;
@@ -9,6 +8,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
+import org.bukkit.plugin.Plugin;
 import org.bukkit.scheduler.BukkitRunnable;
 
 import java.util.Collection;
@@ -17,7 +17,7 @@ import java.util.HashMap;
 public class WEATHER_SUPER implements Listener {
   private int COUNT;
   public static HashMap<Player, Float> MORE_POWER = new HashMap<>();
-  public void spawn(Player player) {
+  public void spawn(Player player, Plugin plugin) {
 
     Location location = player.getLocation();
 
@@ -46,7 +46,7 @@ public class WEATHER_SUPER implements Listener {
           cancel();
         }
       }
-    }.runTaskTimer(Main.soulMain(), 5, 1);
+    }.runTaskTimer(plugin, 5, 1);
     MORE_POWER.put(player, 1f);
     for (Player player1 : location.getNearbyPlayers(20)) {
       player1.setPlayerWeather(WeatherType.DOWNFALL);
@@ -54,13 +54,13 @@ public class WEATHER_SUPER implements Listener {
         public void run() {
           player1.resetPlayerWeather();
         }
-      }.runTaskLater(Main.soulMain(), 20 * 15);
+      }.runTaskLater(plugin, 20 * 15);
     }
     new BukkitRunnable() {
       public void run() {
         MORE_POWER.remove(player);
       }
-    }.runTaskLater(Main.soulMain(), 20 * 15);
+    }.runTaskLater(plugin, 20 * 15);
   }
   @EventHandler
   public void onEvent(EntityDamageByEntityEvent event) {

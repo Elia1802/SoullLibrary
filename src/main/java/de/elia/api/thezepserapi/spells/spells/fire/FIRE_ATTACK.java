@@ -1,6 +1,5 @@
 package de.elia.api.thezepserapi.spells.spells.fire;
 
-import de.elia.api.Main;
 import org.bukkit.Location;
 import org.bukkit.Particle;
 import org.bukkit.Sound;
@@ -8,6 +7,7 @@ import org.bukkit.World;
 import org.bukkit.entity.Illusioner;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
+import org.bukkit.plugin.Plugin;
 import org.bukkit.potion.PotionEffectType;
 import org.bukkit.scheduler.BukkitRunnable;
 import org.bukkit.util.Vector;
@@ -19,7 +19,7 @@ public class FIRE_ATTACK {
   private Location POSITION;
   private Vector DIRECTION;
   
-  public void spawn(Player player, boolean pvp) {
+  public void spawn(Player player, boolean pvp, Plugin plugin) {
     Collection<Player> players = player.getLocation().getNearbyPlayers(14);
     for (Player player1 : players) {
       player1.playSound(player.getLocation(), Sound.ENTITY_EVOKER_PREPARE_ATTACK, 0.7f, 0.8f);
@@ -48,8 +48,8 @@ public class FIRE_ATTACK {
                 if (pvp) {
                   if (entity != player) {
                     if (!(entity instanceof Illusioner)) {
-                      entity.damage(6);
-                      entity.setFireTicks(20 * 4);
+                      entity.damage(10);
+                      entity.setFireTicks(20 * 5);
                     }
                     else {
                       player.spawnParticle(Particle.LAVA, entity.getLocation(), 5);
@@ -63,8 +63,8 @@ public class FIRE_ATTACK {
                 else {
                   if (!(entity instanceof Player)) {
                     if (!(entity instanceof Illusioner)) {
-                      entity.damage(6);
-                      entity.setFireTicks(20 * 4);
+                      entity.damage(10);
+                      entity.setFireTicks(20 * 5);
                     }
                     else {
                       player.spawnParticle(Particle.LAVA, entity.getLocation(), 5);
@@ -84,8 +84,8 @@ public class FIRE_ATTACK {
           }
 
 
-        }.runTaskTimer(Main.soulMain(), 0L, 0L);
+        }.runTaskTimer(plugin, 0L, 0L);
       }
-    }.runTaskLater(Main.soulMain(), 4L);
+    }.runTaskLater(plugin, 4L);
   }
 }
