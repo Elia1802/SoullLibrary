@@ -22,7 +22,7 @@ import java.util.List;
 
 public interface TheZepserAPI {
 
-  Component Prefix= new PrefixClass().prefix();
+  Component Prefix= PrefixClass.prefix();
   static void indicator(int number) {
     Main.logger().info("Indicator: " + number);
   }

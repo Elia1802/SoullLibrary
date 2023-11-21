@@ -101,34 +101,28 @@ public class GRAVITATION_SUPER implements Listener {
           }.runTaskLater(plugin, 45);
           if (itemRegion.getPvP()) {
             if (player == itemRegion.getOwner()) {
-              if (!player.isOnGround()) {
-                if (!(player.hasPotionEffect(PotionEffectType.LEVITATION))) {
-                  Vector unitVector = new Vector(player.getLocation().getDirection().getX() / 2, 0, player.getLocation().getDirection().getZ() / 2);
-                  unitVector = unitVector.normalize();
-                  player.setVelocity(unitVector.multiply(0.3).setY(-1));
-                  player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW_FALLING, 20*2, 5, false, false, false));
-                }
-              }
-            }
-            else {
-              if (!player.isOnGround()) {
-                if (!(player.hasPotionEffect(PotionEffectType.LEVITATION))) {
-                  Vector unitVector = new Vector(player.getLocation().getDirection().getX() / 2, 0, player.getLocation().getDirection().getZ() / 2);
-                  unitVector = unitVector.normalize();
-                  player.setVelocity(unitVector.multiply(0.3).setY(-1));
-                  player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW_FALLING, 20*2, 5, false, false, false));
-                }
-              }
-            }
-          }
-          else {
-            if (!player.isOnGround()) {
               if (!(player.hasPotionEffect(PotionEffectType.LEVITATION))) {
                 Vector unitVector = new Vector(player.getLocation().getDirection().getX() / 2, 0, player.getLocation().getDirection().getZ() / 2);
                 unitVector = unitVector.normalize();
                 player.setVelocity(unitVector.multiply(0.3).setY(-1));
                 player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW_FALLING, 20*2, 5, false, false, false));
               }
+            }
+            else {
+              if (!(player.hasPotionEffect(PotionEffectType.LEVITATION))) {
+                Vector unitVector = new Vector(player.getLocation().getDirection().getX() / 2, 0, player.getLocation().getDirection().getZ() / 2);
+                unitVector = unitVector.normalize();
+                player.setVelocity(unitVector.multiply(0.3).setY(-1));
+                player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW_FALLING, 20*2, 5, false, false, false));
+              }
+            }
+          }
+          else {
+            if (!(player.hasPotionEffect(PotionEffectType.LEVITATION))) {
+              Vector unitVector = new Vector(player.getLocation().getDirection().getX() / 2, 0, player.getLocation().getDirection().getZ() / 2);
+              unitVector = unitVector.normalize();
+              player.setVelocity(unitVector.multiply(0.3).setY(-1));
+              player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW_FALLING, 20*2, 5, false, false, false));
             }
           }
         }
@@ -155,29 +149,23 @@ public class GRAVITATION_SUPER implements Listener {
           }
           if (itemRegion.getPvP()) {
             if (player == itemRegion.getOwner()) {
-              if (!player.isOnGround()) {
-                if (!(player.hasPotionEffect(PotionEffectType.LEVITATION))) {
-                  Vector unitVector = new Vector(player.getLocation().getDirection().getX() / 3, 0, player.getLocation().getDirection().getZ() / 3);
-                  unitVector = unitVector.normalize();
-                  player.setVelocity(unitVector.multiply(0.1).setY(-0.01));
-                }
-              }
-            } else {
-              if (!player.isOnGround()) {
-                if (!(player.hasPotionEffect(PotionEffectType.LEVITATION))) {
-                  Vector unitVector = new Vector(player.getLocation().getDirection().getX() / 3, 0, player.getLocation().getDirection().getZ() / 3);
-                  unitVector = unitVector.normalize();
-                  player.setVelocity(unitVector.multiply(0.1).setY(-0.01));
-                }
-              }
-            }
-          } else {
-            if (!player.isOnGround()) {
               if (!(player.hasPotionEffect(PotionEffectType.LEVITATION))) {
                 Vector unitVector = new Vector(player.getLocation().getDirection().getX() / 3, 0, player.getLocation().getDirection().getZ() / 3);
                 unitVector = unitVector.normalize();
                 player.setVelocity(unitVector.multiply(0.1).setY(-0.01));
               }
+            } else {
+              if (!(player.hasPotionEffect(PotionEffectType.LEVITATION))) {
+                Vector unitVector = new Vector(player.getLocation().getDirection().getX() / 3, 0, player.getLocation().getDirection().getZ() / 3);
+                unitVector = unitVector.normalize();
+                player.setVelocity(unitVector.multiply(0.1).setY(-0.01));
+              }
+            }
+          } else {
+            if (!(player.hasPotionEffect(PotionEffectType.LEVITATION))) {
+              Vector unitVector = new Vector(player.getLocation().getDirection().getX() / 3, 0, player.getLocation().getDirection().getZ() / 3);
+              unitVector = unitVector.normalize();
+              player.setVelocity(unitVector.multiply(0.1).setY(-0.01));
             }
           }
         }

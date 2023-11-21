@@ -1,2 +1,2 @@
-rootProject.name = "SoullLibrary"
+rootProject.name = "SoulLibrary"
 

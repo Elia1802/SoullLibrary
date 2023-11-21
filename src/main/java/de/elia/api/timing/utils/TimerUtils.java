@@ -1,4 +1,4 @@
-package de.elia.api.timing;
+package de.elia.api.timing.utils;
 
 import org.bukkit.plugin.Plugin;
 import org.bukkit.scheduler.BukkitRunnable;
@@ -19,7 +19,7 @@ public class TimerUtils {
    * @param runnable Requires the runnable to be executed when ticks are 0.
    * @param ticks Requires the ticks how long the runnable goes
    */
-  public static void countdownAndRun(int ticks, Runnable runnable, Plugin plugin){
+  public void countdownAndRun(int ticks, Runnable runnable, Plugin plugin){
     if (runnable == null)return;
     new BukkitRunnable() {
       private int internalTicks = ticks;
@@ -45,7 +45,7 @@ public class TimerUtils {
    * @param intervalRunnable Requires a runnable counting down the timer
    * @param finalRunnable Requires a runnable to be executed when intervalRunnable has finished running.
    */
-  public static void countdownInterval(int ticks, TimeRunnable intervalRunnable, Runnable finalRunnable, Plugin plugin){
+  public void countdownInterval(int ticks, TimeRunnable intervalRunnable, Runnable finalRunnable, Plugin plugin){
     if (intervalRunnable == null || finalRunnable == null)return;
     new BukkitRunnable() {
       private int internalTicks = ticks;

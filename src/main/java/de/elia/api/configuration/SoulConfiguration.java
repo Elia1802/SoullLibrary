@@ -995,7 +995,6 @@ public class SoulConfiguration {
      * @param path Requires the path.
      * @return {@link SoulConfiguration#getString(String)}
      */
-    @NotNull
     public String getPath(String path){
         return getString(path);
     }
@@ -1007,7 +1006,6 @@ public class SoulConfiguration {
      * @param path Requires the path.
      * @return {@link String}
      */
-    @NotNull
     public String getString(String path){
         return !contains(path) ? null : configuration.getString(path);
     }
@@ -1021,7 +1019,6 @@ public class SoulConfiguration {
      * @param string Requires the string.
      * @return {@link String}
      */
-    @NotNull
     public String getString(String path , String string){
         return !contains(path) ? null : configuration.getString(path , string);
     }
@@ -1128,7 +1125,6 @@ public class SoulConfiguration {
      * @param path Requires the path.
      * @return {@link Boolean}
      */
-    @NotNull
     public Boolean contains(String path){
         return configuration.contains(path);
     }

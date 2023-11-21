@@ -11,7 +11,7 @@ public class Main extends JavaPlugin {
 
    @Override
    public void onEnable(){
-      logger.warning("Please initialize this library in the other plugin");
+      logger.info("Please initialize this library in the other plugin");
    }
 
    @Override

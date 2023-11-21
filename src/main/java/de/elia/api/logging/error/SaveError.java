@@ -21,7 +21,7 @@ public class SaveError {
      * @since 2.0.0
      * @description Save the exception in the file
      */
-    public void saveError(@NotNull JavaPlugin main, @NotNull Exception exception, String name){
+    public static void saveError(@NotNull JavaPlugin main, @NotNull Exception exception, String name){
         SoulConfiguration file = new SoulConfiguration(main, "errors/", name + ".txt");
         try {
             PrintWriter writer = new PrintWriter(file.getFile());

@@ -82,8 +82,6 @@ public class FIRE_ATTACK {
               cancel();
             }
           }
-
-
         }.runTaskTimer(plugin, 0L, 0L);
       }
     }.runTaskLater(plugin, 4L);

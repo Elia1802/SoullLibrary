@@ -18,7 +18,7 @@ public class PrefixClass {
 
     }
 
-    private final MiniMessage miniMessage = MiniMessage.miniMessage();
+    private static final MiniMessage miniMessage = MiniMessage.miniMessage();
 
     /**
      * @author Elia
@@ -28,7 +28,7 @@ public class PrefixClass {
      * @return {@link Component}
      */
     @NotNull
-    public Component prefix(){
+    public static Component prefix(){
         return miniMessage.deserialize("<dark_grey>[<#9545a3>SoulSMP</#9545a3>]</dark_grey> ");
     }
 
@@ -40,7 +40,7 @@ public class PrefixClass {
      * @return {@link Component}
      */
     @NotNull
-    public String errorPrefix(){
+    public static String errorPrefix(){
         return "[SoulError] ";
     }
 
@@ -52,7 +52,7 @@ public class PrefixClass {
      * @return {@link Component}
      */
     @NotNull
-    public String warningPrefix(){
+    public static String warningPrefix(){
         return "[SoulWarning] ";
     }
 
@@ -64,7 +64,7 @@ public class PrefixClass {
      * @return {@link Component}
      */
     @NotNull
-    public String infoPrefix(){
+    public static String infoPrefix(){
         return "[SoulSMP] ";
     }
 }

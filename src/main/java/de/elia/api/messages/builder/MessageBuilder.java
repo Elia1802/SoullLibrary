@@ -23,8 +23,8 @@ import java.util.logging.Logger;
 public class MessageBuilder {
 
     private final Logger logger = Bukkit.getLogger();
-    private final MiniMessage miniMessage = MiniMessage.miniMessage();
-    private final PrefixClass prefix = new PrefixClass();
+    private static final MiniMessage miniMessage = MiniMessage.miniMessage();
+    private static final PrefixClass prefix = new PrefixClass();
 
     public MessageBuilder(){
     }
@@ -38,7 +38,7 @@ public class MessageBuilder {
      * @return {@link Component}
      */
     @NotNull
-    public Component newLines(@NotNull List<Component> lines){
+    public static Component newLines(@NotNull List<Component> lines){
         Component result = Component.empty();
 
         for (Component component : lines) {
@@ -57,7 +57,7 @@ public class MessageBuilder {
      * @return {@link Component}
      */
     @NotNull
-    public Component newLines(Component @NotNull ... lines){
+    public static Component newLines(Component @NotNull ... lines){
         Component result = Component.empty();
 
         for (Component component : lines) {
@@ -74,7 +74,7 @@ public class MessageBuilder {
      * @description Send a broadcast message
      * @param message Requires a message as {@link Component}
      */
-    public void broadcast(Component message){
+    public static void broadcast(Component message){
         Bukkit.broadcast(message);
     }
 
@@ -85,7 +85,7 @@ public class MessageBuilder {
      * @description Send a broadcast message with Prefix
      * @param message Requires a message as {@link Component}
      */
-    public void broadcastWithPrefix(Component message){
+    public static void broadcastWithPrefix(Component message){
         Bukkit.broadcast(prefix.prefix().append(message));
     }
 
@@ -96,7 +96,7 @@ public class MessageBuilder {
      * @description Send a broadcast message
      * @param message Requires a message as {@link String}
      */
-    public void broadcast(String message){
+    public static void broadcast(String message){
         Bukkit.broadcast(miniMessage.deserialize(message));
     }
 
@@ -107,7 +107,7 @@ public class MessageBuilder {
      * @description Send a broadcast message with Prefix
      * @param message Requires a message as {@link Component}
      */
-    public void broadcastWithPrefix(String message){
+    public static void broadcastWithPrefix(String message){
         Bukkit.broadcast(miniMessage.deserialize(prefix.prefix() + message));
     }
 
@@ -120,7 +120,7 @@ public class MessageBuilder {
      * @param permission Requires a permission
      * @param message Requires a message as {@link Component}
      */
-    public void broadcast(@NotNull Player player , String permission , Component message){
+    public static void broadcast(@NotNull Player player , String permission , Component message){
         if (player.hasPermission(permission)) {
             Bukkit.broadcast(message);
         }
@@ -135,7 +135,7 @@ public class MessageBuilder {
      * @param permission Requires a permission
      * @param message Requires a message as {@link Component}
      */
-    public void broadcastWithPrefix(@NotNull Player player , String permission , Component message){
+    public static void broadcastWithPrefix(@NotNull Player player , String permission , Component message){
         if (player.hasPermission(permission)) {
             Bukkit.broadcast(prefix.prefix().append(message));
         }
@@ -150,7 +150,7 @@ public class MessageBuilder {
      * @param permission Requires a permission
      * @param message Requires a message as {@link String}
      */
-    public void broadcast(@NotNull Player player , String permission , String message){
+    public static void broadcast(@NotNull Player player , String permission , String message){
         if (player.hasPermission(permission)) {
             Bukkit.broadcast(miniMessage.deserialize(message));
         }
@@ -165,7 +165,7 @@ public class MessageBuilder {
      * @param permission Requires a permission
      * @param message Requires a message as {@link String}
      */
-    public void broadcastWithPrefix(@NotNull Player player , String permission , String message){
+    public static void broadcastWithPrefix(@NotNull Player player , String permission , String message){
         if (player.hasPermission(permission)) {
             Bukkit.broadcast(miniMessage.deserialize(prefix.prefix() + message));
         }
@@ -179,7 +179,7 @@ public class MessageBuilder {
      * @param permission Requires a permission
      * @param message Requires a message as {@link Component}
      */
-    public void broadcast(Component message , String permission){
+    public static void broadcast(Component message , String permission){
         Bukkit.broadcast(message , permission);
     }
 
@@ -191,7 +191,7 @@ public class MessageBuilder {
      * @param permission Requires a permission
      * @param message Requires a message as {@link Component}
      */
-    public void broadcastWithPrefix(Component message , String permission){
+    public static void broadcastWithPrefix(Component message , String permission){
         Bukkit.broadcast(prefix.prefix().append(message) , permission);
     }
 
@@ -203,7 +203,7 @@ public class MessageBuilder {
      * @param permission Requires a permission
      * @param message Requires a message as {@link String}
      */
-    public void broadcast(String message , String permission){
+    public static void broadcast(String message , String permission){
         Bukkit.broadcast(miniMessage.deserialize(message) , permission);
     }
 
@@ -215,7 +215,7 @@ public class MessageBuilder {
      * @param permission Requires a permission
      * @param message Requires a message as {@link String}
      */
-    public void broadcastWithPrefix(String message , String permission){
+    public static void broadcastWithPrefix(String message , String permission){
         Bukkit.broadcast(miniMessage.deserialize(prefix.prefix() + message) , permission);
     }
 
@@ -227,7 +227,7 @@ public class MessageBuilder {
      * @param player Requires a {@link Player}
      * @param message Requires a message as {@link Component}
      */
-    public void kickMessage(@NotNull Player player , Component message){
+    public static void kickMessage(@NotNull Player player , Component message){
         player.kick(message);
     }
 
@@ -240,7 +240,7 @@ public class MessageBuilder {
      * @param message Requires a message as {@link Component}
      * @param cause Requires a cause for the kick ({@link PlayerKickEvent.Cause})
      */
-    public void kickMessage(@NotNull Player player , Component message , PlayerKickEvent.Cause cause) {
+    public static void kickMessage(@NotNull Player player , Component message , PlayerKickEvent.Cause cause) {
         player.kick(message , cause);
     }
 
@@ -253,8 +253,8 @@ public class MessageBuilder {
      * @param message Requires a message as {@link Component}
      * @param cause Requires a cause for the kick ({@link Component})
      */
-    public void kickMessage(@NotNull Player player , Component message , Component cause){
-        player.kick(this.newLines(message , cause));
+    public static void kickMessage(@NotNull Player player , Component message , Component cause){
+        player.kick(newLines(message , cause));
     }
 
     /**
@@ -265,7 +265,7 @@ public class MessageBuilder {
      * @param player Requires a {@link Player}
      * @param message Requires a message as {@link String}
      */
-    public void kickMessage(@NotNull Player player , String message){
+    public static void kickMessage(@NotNull Player player , String message){
         player.kick(miniMessage.deserialize(message));
     }
 
@@ -278,7 +278,7 @@ public class MessageBuilder {
      * @param message Requires a message as {@link Component}
      * @param cause Requires a cause for the kick ({@link PlayerKickEvent.Cause})
      */
-    public void kickMessage(@NotNull Player player , String message , PlayerKickEvent.Cause cause) {
+    public static void kickMessage(@NotNull Player player , String message , PlayerKickEvent.Cause cause) {
         player.kick(miniMessage.deserialize(message) , cause);
     }
 
@@ -291,65 +291,8 @@ public class MessageBuilder {
      * @param message Requires a message as {@link Component}
      * @param cause Requires a cause for the kick ({@link Component})
      */
-    public void kickMessage(@NotNull Player player, String message , Component cause){
-        player.kick(this.newLines(miniMessage.deserialize(message) , cause));
-    }
-
-    /**
-     * @author Elia
-     * @since V.1.0.0
-     * @version V.1.0.0
-     * @description log an information in the console
-     * @param message Requires a message as {@link String}
-     */
-    public void infoLog(String message){
-        logger.info(prefix.infoPrefix() + message);
-    }
-
-    /**
-     * @author Elia
-     * @since V.1.0.0
-     * @version V.1.0.0
-     * @description log a warning in the console
-     * @param message Requires a message as {@link String}
-     */
-    public void warningLog(String message){
-        logger.warning(prefix.warningPrefix() + message);
-    }
-
-    /**
-     * @author Elia
-     * @since V.1.0.0
-     * @version V.1.0.0
-     * @description log an error in the console
-     * @param message Requires a message as {@link String}
-     */
-    public void errorLog(String message){
-        logger.severe(prefix.errorPrefix() + message);
-    }
-
-    /**
-     * @author Elia
-     * @since V.1.0.0
-     * @version V.1.0.0
-     * @description log in the console
-     * @param level Requires the log level
-     * @param message Requires a message as {@link String}
-     */
-    public void log(Level level , String message){
-        logger.log(level , message);
-    }
-
-    /**
-     * @author Elia
-     * @since V.1.0.0
-     * @version V.1.0.0
-     * @description gets the logger
-     * @return {@link Logger}
-     */
-    @NotNull
-    public Logger log(){
-        return logger;
+    public static void kickMessage(@NotNull Player player, String message , Component cause){
+        player.kick(newLines(miniMessage.deserialize(message) , cause));
     }
 
     /**
@@ -360,7 +303,7 @@ public class MessageBuilder {
      * @param command Requires the Command
      * @param message Requires the Message
      */
-    public void permissionMessage(String command , String message){
+    public static void permissionMessage(String command , String message){
         Component component = miniMessage.deserialize(prefix.errorPrefix() + message);
         Bukkit.getPluginCommand(command).permissionMessage(component);
     }
@@ -372,7 +315,7 @@ public class MessageBuilder {
      * @description Send a message to a {@link Player}
      * @param message Requires a message as {@link Component}
      */
-    public void message(@NotNull Player player , Component message){
+    public static void message(@NotNull Player player , Component message){
         player.sendMessage(message);
     }
 
@@ -383,7 +326,7 @@ public class MessageBuilder {
      * @description Send a message to a {@link Player} with prefix
      * @param message Requires a message as {@link Component}
      */
-    public void messageWithPrefix(@NotNull Player player , Component message){
+    public static void messageWithPrefix(@NotNull Player player , Component message){
         player.sendMessage(prefix.prefix().append(message));
     }
 
@@ -394,7 +337,7 @@ public class MessageBuilder {
      * @description Send a message to a {@link Player}
      * @param message Requires a message as {@link String}
      */
-    public void message(@NotNull Player player , String message){
+    public static void message(@NotNull Player player , String message){
         player.sendMessage(miniMessage.deserialize(message));
     }
 
@@ -405,7 +348,7 @@ public class MessageBuilder {
      * @description Send a message to a {@link Player} with prefix
      * @param message Requires a message as {@link String}
      */
-    public void messageWithPrefix(@NotNull Player player , String message){
+    public static void messageWithPrefix(@NotNull Player player , String message){
         player.sendMessage(miniMessage.deserialize(prefix.prefix() + message));
     }
 
@@ -416,7 +359,7 @@ public class MessageBuilder {
      * @description Send a message to a {@link CommandSender}
      * @param message Requires a message as {@link Component}
      */
-    public void message(@NotNull CommandSender sender , Component message){
+    public static void message(@NotNull CommandSender sender , Component message){
         sender.sendMessage(message);
     }
 
@@ -427,7 +370,7 @@ public class MessageBuilder {
      * @description Send a message to a {@link CommandSender} with Prefix
      * @param message Requires a message as {@link Component}
      */
-    public void messageWithPrefix(@NotNull CommandSender sender , Component message){
+    public static void messageWithPrefix(@NotNull CommandSender sender , Component message){
         sender.sendMessage(prefix.prefix().append(message));
     }
 
@@ -438,7 +381,7 @@ public class MessageBuilder {
      * @description Send a message to a {@link CommandSender}
      * @param message Requires a message as {@link String}
      */
-    public void message(@NotNull CommandSender sender , String message){
+    public static void message(@NotNull CommandSender sender , String message){
         sender.sendMessage(miniMessage.deserialize(message));
     }
 
@@ -449,13 +392,13 @@ public class MessageBuilder {
      * @description Send a message to a {@link CommandSender} with Prefix
      * @param message Requires a message as {@link String}
      */
-    public void messageWithPrefix(@NotNull CommandSender sender , String message){
+    public static void messageWithPrefix(@NotNull CommandSender sender , String message){
         sender.sendMessage(miniMessage.deserialize(prefix.prefix() + message));
     }
 
     //FOR THIS CLASS
     @NotNull
-    private Component color(String color , String message){
+    private static Component color(String color , String message){
         return miniMessage.deserialize("<" + color + ">" + message + "</" + color + ">");
     }
 
@@ -470,7 +413,7 @@ public class MessageBuilder {
      * @return {@link Component}
      */
     @NotNull
-    public Component gradient(String ofColor , String toColor , String message){
+    public static Component gradient(String ofColor , String toColor , String message){
         return miniMessage.deserialize("<gradient:" + ofColor + ":" + toColor + ">" + message);
     }
 
@@ -484,7 +427,7 @@ public class MessageBuilder {
      * @return {@link Component}
      */
     @NotNull
-    public Component hover(String textToShow , String message){
+    public static Component hover(String textToShow , String message){
         return miniMessage.deserialize("<hover:show_text'" + textToShow + "'>" + message);
     }
 
@@ -497,8 +440,8 @@ public class MessageBuilder {
      * @return {@link Component}
      */
     @NotNull
-    public Component black(String message){
-        return this.color("black" , message);
+    public static Component black(String message){
+        return color("black" , message);
     }
 
     /**
@@ -510,8 +453,8 @@ public class MessageBuilder {
      * @return {@link Component}
      */
     @NotNull
-    public Component darkBlue(String message){
-        return this.color("dark_blue" , message);
+    public static Component darkBlue(String message){
+        return color("dark_blue" , message);
     }
 
     /**
@@ -523,8 +466,8 @@ public class MessageBuilder {
      * @return {@link Component}
      */
     @NotNull
-    public Component darkGreen(String message){
-        return this.color("dark_green" , message);
+    public static Component darkGreen(String message){
+        return color("dark_green" , message);
     }
 
     /**
@@ -536,8 +479,8 @@ public class MessageBuilder {
      * @return {@link Component}
      */
     @NotNull
-    public Component darkAqua(String message){
-        return this.color("dark_aqua" , message);
+    public static Component darkAqua(String message){
+        return color("dark_aqua" , message);
     }
 
     /**
@@ -549,8 +492,8 @@ public class MessageBuilder {
      * @return {@link Component}
      */
     @NotNull
-    public Component darkRed(String message){
-        return this.color("dark_red" , message);
+    public static Component darkRed(String message){
+        return color("dark_red" , message);
     }
 
     /**
@@ -562,8 +505,8 @@ public class MessageBuilder {
      * @return {@link Component}
      */
     @NotNull
-    public Component darkPurple(String message){
-        return this.color("dark_purple" , message);
+    public static Component darkPurple(String message){
+        return color("dark_purple" , message);
     }
 
     /**
@@ -575,8 +518,8 @@ public class MessageBuilder {
      * @return {@link Component}
      */
     @NotNull
-    public Component darkGray(String message){
-        return this.color("dark_gray" , message);
+    public static Component darkGray(String message){
+        return color("dark_gray" , message);
     }
 
     /**
@@ -588,8 +531,8 @@ public class MessageBuilder {
      * @return {@link Component}
      */
     @NotNull
-    public Component gold(String message){
-        return this.color("gold" , message);
+    public static Component gold(String message){
+        return color("gold" , message);
     }
 
     /**
@@ -601,8 +544,8 @@ public class MessageBuilder {
      * @return {@link Component}
      */
     @NotNull
-    public Component gray(String message){
-        return this.color("gray" , message);
+    public static Component gray(String message){
+        return color("gray" , message);
     }
 
     /**
@@ -614,8 +557,8 @@ public class MessageBuilder {
      * @return {@link Component}
      */
     @NotNull
-    public Component blue(String message){
-        return this.color("blue" , message);
+    public static Component blue(String message){
+        return color("blue" , message);
     }
 
     /**
@@ -627,8 +570,8 @@ public class MessageBuilder {
      * @return {@link Component}
      */
     @NotNull
-    public Component green(String message){
-        return this.color("green" , message);
+    public static Component green(String message){
+        return color("green" , message);
     }
     /**
      * @author Elia
@@ -639,8 +582,8 @@ public class MessageBuilder {
      * @return {@link Component}
      */
     @NotNull
-    public Component aqua(String message){
-        return this.color("aqua" , message);
+    public static Component aqua(String message){
+        return color("aqua" , message);
     }
 
     /**
@@ -652,8 +595,8 @@ public class MessageBuilder {
      * @return {@link Component}
      */
     @NotNull
-    public Component red(String message){
-        return this.color("red" , message);
+    public static Component red(String message){
+        return color("red" , message);
     }
 
     /**
@@ -665,8 +608,8 @@ public class MessageBuilder {
      * @return {@link Component}
      */
     @NotNull
-    public Component lightPurple(String message){
-        return this.color("light_purple" , message);
+    public static Component lightPurple(String message){
+        return color("light_purple" , message);
     }
 
     /**
@@ -678,8 +621,8 @@ public class MessageBuilder {
      * @return {@link Component}
      */
     @NotNull
-    public Component yellow(String message){
-        return this.color("yellow" , message);
+    public static Component yellow(String message){
+        return color("yellow" , message);
     }
 
     /**
@@ -691,8 +634,8 @@ public class MessageBuilder {
      * @return {@link Component}
      */
     @NotNull
-    public Component white(String message){
-        return this.color("white" , message);
+    public static Component white(String message){
+        return color("white" , message);
     }
 
     /**
@@ -704,8 +647,8 @@ public class MessageBuilder {
      * @return {@link Component}
      */
     @NotNull
-    public Component bold(String message){
-        return this.color("bold" , message);
+    public static Component bold(String message){
+        return color("bold" , message);
     }
 
     /**
@@ -717,8 +660,8 @@ public class MessageBuilder {
      * @return {@link Component}
      */
     @NotNull
-    public Component italic(String message){
-        return this.color("italic" , message);
+    public static Component italic(String message){
+        return color("italic" , message);
     }
 
     /**
@@ -730,8 +673,8 @@ public class MessageBuilder {
      * @return {@link Component}
      */
     @NotNull
-    public Component underlined(String message){
-        return this.color("underlined" , message);
+    public static Component underlined(String message){
+        return color("underlined" , message);
     }
 
     /**
@@ -743,8 +686,8 @@ public class MessageBuilder {
      * @return {@link Component}
      */
     @NotNull
-    public Component strikethrough(String message){
-        return this.color("strikethrough" , message);
+    public static Component strikethrough(String message){
+        return color("strikethrough" , message);
     }
 
     /**
@@ -756,8 +699,8 @@ public class MessageBuilder {
      * @return {@link Component}
      */
     @NotNull
-    public Component obfuscated(String message){
-        return this.color("obfuscated" , message);
+    public static Component obfuscated(String message){
+        return color("obfuscated" , message);
     }
 
 }

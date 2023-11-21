@@ -6,7 +6,7 @@ package de.elia.api.logging.debug;
  * @since 1.0.0.pre1
  * @description To Send Debug messages
  */
-public class PluginDebuger {
+public class PluginDebugger {
 
   /**
    * @author Elia
