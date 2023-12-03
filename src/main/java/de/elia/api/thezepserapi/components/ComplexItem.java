@@ -115,6 +115,10 @@ public class ComplexItem implements Cloneable {
       Component component = MINI_MESSAGE.deserialize("<gray>Typ:</gray> <aqua>NONE</aqua>");
       list.add(component);
     }
+    else if (type.equals(Type.SPAWN_EGG)) {
+      Component component = MINI_MESSAGE.deserialize("<gray>Typ:</gray> <aqua>Spawn Egg</aqua>");
+      list.add(component);
+    }
     meta.lore(list);
     this.ITEM.setItemMeta(meta);
     return this;
