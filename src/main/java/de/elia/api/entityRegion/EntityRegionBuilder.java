@@ -2,21 +2,22 @@ package de.elia.api.entityRegion;
 
 import org.bukkit.Location;
 import org.bukkit.Particle;
-import org.bukkit.entity.LivingEntity;
+import org.bukkit.entity.Entity;
 
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 import java.util.Collection;
 
 public class EntityRegionBuilder {
 
   @NotNull
-  public static Collection<LivingEntity> getAllEntitiesInRegion(@NotNull EntityRegion region){
-    return region.getCenter().getNearbyLivingEntities(region.getRadius());
+  public static Collection<Entity> getAllEntitiesInRegion(@Nullable Class<? extends Entity> classOfTheEntity, @NotNull EntityRegion region){
+    return region.getCenter().getNearbyEntitiesByType(classOfTheEntity, region.getRadius());
   }
 
-  public boolean containsEntity(@NotNull LivingEntity entity, @NotNull EntityRegion region){
-    if (entity.getLocation().distance(region.getCenter()) < region.getRadius()) {
+  public static boolean containsEntity(@NotNull Entity entity, @NotNull Location center, double radius){
+    if (entity.getLocation().distance(center) < radius) {
       return true;
     }else return false;
   }
@@ -26,12 +27,12 @@ public class EntityRegionBuilder {
   }
 
   @NotNull
-  public static EntityRegion create(@NotNull Location center, double radius, @NotNull LivingEntity regionOwner, boolean pvp, boolean pvpWithProjectile){
+  public static EntityRegion create(@NotNull Location center, double radius, @NotNull Entity regionOwner, boolean pvp, boolean pvpWithProjectile){
     return new EntityRegion(center, radius, regionOwner, pvp, pvpWithProjectile);
   }
 
-  public static void createEntityRegionBorder(EntityRegion region, Particle particle){
-    new EntityRegionBorder(region, particle);
+  public static void createEntityRegionBorder(double radius, @NotNull Location center, Particle particle){
+    new EntityRegionBorder(radius, center, particle);
   }
 
 }

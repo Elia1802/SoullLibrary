@@ -1,18 +1,18 @@
 package de.elia.api.entityRegion;
 
 import org.bukkit.Location;
-import org.bukkit.entity.LivingEntity;
+import org.bukkit.entity.Entity;
 import org.jetbrains.annotations.NotNull;
 
 public class EntityRegion {
 
   private Location center;
   private double radius;
-  private LivingEntity regionOwner;
+  private Entity regionOwner;
   private boolean pvp;
   private boolean pvpWithProjectile;
 
-  public EntityRegion(@NotNull Location center, double radius, @NotNull LivingEntity regionOwner, boolean pvp, boolean pvpWithProjectile){
+  public EntityRegion(@NotNull Location center, double radius, @NotNull Entity regionOwner, boolean pvp, boolean pvpWithProjectile){
     this.center = center;
     this.radius = radius;
     this.regionOwner = regionOwner;
@@ -30,7 +30,7 @@ public class EntityRegion {
   }
 
   @NotNull
-  public LivingEntity getRegionOwner() {
+  public Entity getRegionOwner() {
     return this.regionOwner;
   }
 

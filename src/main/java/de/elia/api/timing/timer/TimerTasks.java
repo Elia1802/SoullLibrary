@@ -23,7 +23,7 @@ public class TimerTasks {
    * @param player Requires a {@link Player}
    * @param location Requires a {@link Location}
    */
-  public void start(int time, @NotNull Player player, Location location, Plugin plugin){
+  public void start(int time, Player player, Location location, @NotNull Plugin plugin){
       new TimerUtils().countdownAndRun(time,
               new Runnable() {
                   @Override
