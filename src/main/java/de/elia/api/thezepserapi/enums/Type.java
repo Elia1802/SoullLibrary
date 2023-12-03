@@ -11,5 +11,6 @@ public enum Type {
   FOOD,
   DROPS,
   BLOCK,
+  SPAWN_EGG,
   NONE
 }
