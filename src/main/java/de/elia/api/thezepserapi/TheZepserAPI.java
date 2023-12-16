@@ -24,7 +24,7 @@ public interface TheZepserAPI {
 
   Component Prefix= PrefixClass.prefix();
   static void indicator(int number) {
-    Main.logger().info("Indicator: " + number);
+    Main.getSoulLibrary().logger().logInfo("Indicator: " + number);
   }
 
 
