@@ -396,9 +396,8 @@ public class MessageBuilder {
         sender.sendMessage(miniMessage.deserialize(prefix.prefix() + message));
     }
 
-    //FOR THIS CLASS
     @NotNull
-    private static Component color(String color , String message){
+    public static Component color(String color , String message){
         return miniMessage.deserialize("<" + color + ">" + message + "</" + color + ">");
     }
 
