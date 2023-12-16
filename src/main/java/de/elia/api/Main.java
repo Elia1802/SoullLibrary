@@ -6,13 +6,17 @@ import org.jetbrains.annotations.NotNull;
 
 public class Main extends JavaPlugin {
 
-   private final PluginLogger pluginLogger = new PluginLogger("Soul-Library");
+   private final PluginLogger logger;
+
+   public Main(PluginLogger logger) {
+      this.logger = logger;
+   }
    private static Main soulLibrary;
 
    @Override
    public void onEnable(){
       soulLibrary = this;
-      pluginLogger.logWarning("Please initialize this library in the other plugin");
+      logger.logWarning("Please initialize this library in the other plugin");
    }
 
    @Override
@@ -24,7 +28,7 @@ public class Main extends JavaPlugin {
 
    @NotNull
    public PluginLogger logger() {
-      return pluginLogger;
+      return logger;
    }
 
 }

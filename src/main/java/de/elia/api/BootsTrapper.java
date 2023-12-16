@@ -1,5 +1,6 @@
 package de.elia.api;
 
+import de.elia.api.logging.PluginLogger;
 import io.papermc.paper.plugin.bootstrap.BootstrapContext;
 import io.papermc.paper.plugin.bootstrap.PluginBootstrap;
 import io.papermc.paper.plugin.bootstrap.PluginProviderContext;
@@ -14,24 +15,24 @@ import static de.elia.api.PluginInfo.VERSION;
 
 public class BootsTrapper implements PluginBootstrap {
 
-    private final Main main = new Main();
+    private final PluginLogger pluginLogger = new PluginLogger("Soul-Library");
 
     @Override
     public void bootstrap(@NotNull BootstrapContext context) {
-        main.logger().logInfo("Boot " + NAME + "...");
-        main.logger().logInfo("This is an build of " + NAME + "!");
+        pluginLogger.logInfo("Boot " + NAME + "...");
+        pluginLogger.logInfo("This is an build of " + NAME + "!");
     }
 
     @Override
     public @NotNull JavaPlugin createPlugin(@NotNull PluginProviderContext context) {
-        main.logger().logInfo("Information about this Plugin");
-        main.logger().logInfo("Name: " + NAME);
-        main.logger().logInfo("API-Name: " + API_NAME);
-        main.logger().logInfo("API-Version: " + API_VERSION);
-        main.logger().logInfo("Version: " + VERSION);
-        main.logger().logInfo("Authors: " + AUTHOR);
-        main.logger().logInfo("Booting finished!");
-        main.logger().logInfo("Load Main!");
-        return this.main;
+        pluginLogger.logInfo("Information about this Plugin");
+        pluginLogger.logInfo("Name: " + NAME);
+        pluginLogger.logInfo("API-Name: " + API_NAME);
+        pluginLogger.logInfo("API-Version: " + API_VERSION);
+        pluginLogger.logInfo("Version: " + VERSION);
+        pluginLogger.logInfo("Authors: " + AUTHOR);
+        pluginLogger.logInfo("Booting finished!");
+        pluginLogger.logInfo("Load Main!");
+        return new Main(pluginLogger);
     }
 }
