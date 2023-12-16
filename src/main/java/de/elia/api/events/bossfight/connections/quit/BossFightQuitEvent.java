@@ -1,6 +1,5 @@
 package de.elia.api.events.bossfight.connections.quit;
 
-import de.elia.api.Main;
 import de.elia.api.messages.builder.MessageBuilder;
 import net.kyori.adventure.text.Component;
 import org.bukkit.Bukkit;
@@ -13,7 +12,8 @@ import org.jetbrains.annotations.Nullable;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.UUID;
-import java.util.logging.Level;
+
+import static de.elia.api.messages.builder.MessageBuilder.message;
 
 public class BossFightQuitEvent extends Event {
 
@@ -22,26 +22,13 @@ public class BossFightQuitEvent extends Event {
   private Set<Player> players = new HashSet<>();
   private final Player quitedPlayer;
 
-  public BossFightQuitEvent(@NotNull Set<Player> players, Player quitedPlayer){
+  public BossFightQuitEvent(@NotNull Set<Player> players, @NotNull Player quitedPlayer){
     this.players = players;
     this.quitedPlayer = quitedPlayer;
   }
 
-  public void sendQuitMessage(@NotNull Component message, Component messageForQuitedPlayer) throws NullPointerException{
-    this.players.forEach(player -> messageBuilder.message(player, message));
-    if (quitedPlayer == null) {
-      Main.logger().log(Level.SEVERE, "Message can't send because quitedPlayer is null!");
-      return;
-    }
-    if (messageForQuitedPlayer == null) {
-      Main.logger().log(Level.SEVERE, "Message can't send because messageForQuitedPlayer is null!");
-      return;
-    }
-    messageBuilder.message(quitedPlayer, messageForQuitedPlayer);
-  }
-
-  public void sendQuitMessage(@NotNull Component message){
-    this.players.forEach(player -> messageBuilder.message(player, message));
+  public void sendQuitMessage(Component message) {
+    this.players.forEach(player -> message(player, message));
   }
 
   @Nullable
