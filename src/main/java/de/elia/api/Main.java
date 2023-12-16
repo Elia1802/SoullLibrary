@@ -1,27 +1,30 @@
 package de.elia.api;
 
+import de.elia.api.logging.PluginLogger;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.jetbrains.annotations.NotNull;
 
-import java.util.logging.Logger;
-
 public class Main extends JavaPlugin {
 
-   private static final Logger logger = Logger.getLogger("Soul-Library");
+   private final PluginLogger pluginLogger = new PluginLogger("Soul-Library");
+   private static Main soulLibrary;
 
    @Override
    public void onEnable(){
-      logger.info("Please initialize this library in the other plugin");
+      soulLibrary = this;
+      pluginLogger.logWarning("Please initialize this library in the other plugin");
    }
 
    @Override
-   public void onDisable(){
+   public void onDisable(){}
 
+   public static Main getSoulLibrary() {
+      return soulLibrary;
    }
 
    @NotNull
-   public static Logger logger(){
-      return logger;
+   public PluginLogger logger() {
+      return pluginLogger;
    }
 
 }
