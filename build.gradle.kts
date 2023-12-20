@@ -27,6 +27,11 @@ dependencies {
 }
 
 tasks {
+
+    assemble {
+        dependsOn(reobfJar)
+    }
+
     compileJava {
         options.encoding = Charsets.UTF_8.name()
         options.release.set(19)
