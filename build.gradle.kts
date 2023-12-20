@@ -1,5 +1,11 @@
 plugins {
-    id("java")
+    `java-library`
+    id("io.papermc.paperweight.userdev") version "1.4.0"
+    id("xyz.jpenilla.run-paper") version "2.0.1"
+}
+
+java {
+    toolchain.languageVersion.set(JavaLanguageVersion.of(19))
 }
 
 group = "de.elia"
@@ -7,18 +13,30 @@ version = "3.0.1"
 
 repositories {
     mavenCentral()
-    maven {
-        setUrl("https://repo.papermc.io/repository/maven-public/")
-        setUrl("https://maven.enginehub.org/repo/")
+    repositories {
+        mavenCentral()
+        maven { url = uri("https://repo.papermc.io/repository/maven-public/") }
     }
 }
 
 dependencies {
-    compileOnly("io.papermc.paper:paper-api:1.20.4-R0.1-SNAPSHOT")
+    paperDevBundle("1.20.4-R0.1-SNAPSHOT")
+    paperweightDevelopmentBundle("io.papermc.paper:dev-bundle:1.20.4-R0.1-SNAPSHOT")
     implementation("org.apache.logging.log4j:log4j-api:2.22.0")
     implementation("org.apache.logging.log4j:log4j-core:2.22.0")
 }
 
-tasks.test {
-    useJUnitPlatform()
+tasks {
+    compileJava {
+        options.encoding = Charsets.UTF_8.name()
+        options.release.set(19)
+    }
+
+    javadoc {
+        options.encoding = Charsets.UTF_8.name()
+    }
+
+    processResources {
+        filteringCharset = Charsets.UTF_8.name()
+    }
 }
