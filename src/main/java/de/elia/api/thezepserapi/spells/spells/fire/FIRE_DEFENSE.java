@@ -30,7 +30,7 @@ public class FIRE_DEFENSE {
             double x = particleRadius * Math.cos(radians);
             double z = particleRadius * Math.sin(radians);
             location.add(x, 0, z);
-            location.getWorld().spawnParticle(Particle.DRIP_LAVA, location, 1);
+            location.getWorld().spawnParticle(Particle.DRIPPING_LAVA, location, 1);
             location.subtract(x, 0, z);
           }
           for (Player player1 : location.getNearbyPlayers(4)) {

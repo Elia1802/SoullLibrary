@@ -1,6 +1,5 @@
 package de.elia.api.messages.builder;
 
-import de.elia.api.messages.prefix.PrefixClass;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.minimessage.MiniMessage;
 import org.bukkit.Bukkit;
@@ -10,8 +9,10 @@ import org.bukkit.event.player.PlayerKickEvent;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
-import java.util.logging.Level;
 import java.util.logging.Logger;
+
+import static de.elia.api.messages.prefix.PrefixClass.errorPrefix;
+import static de.elia.api.messages.prefix.PrefixClass.prefix;
 
 /**
  * @author Elia
@@ -24,8 +25,6 @@ public class MessageBuilder {
 
     private final Logger logger = Bukkit.getLogger();
     private static final MiniMessage miniMessage = MiniMessage.miniMessage();
-    private static final PrefixClass prefix = new PrefixClass();
-
     public MessageBuilder(){
     }
 
@@ -86,7 +85,7 @@ public class MessageBuilder {
      * @param message Requires a message as {@link Component}
      */
     public static void broadcastWithPrefix(Component message){
-        Bukkit.broadcast(prefix.prefix().append(message));
+        Bukkit.broadcast(prefix().append(message));
     }
 
     /**
@@ -108,14 +107,14 @@ public class MessageBuilder {
      * @param message Requires a message as {@link Component}
      */
     public static void broadcastWithPrefix(String message){
-        Bukkit.broadcast(miniMessage.deserialize(prefix.prefix() + message));
+        Bukkit.broadcast(miniMessage.deserialize(prefix() + message));
     }
 
     /**
      * @author Elia
      * @since V.1.0.0
      * @version V.1.0.0
-     * @description Send a broadcast message to {@link Player} with a specify permission
+     * @description Send a broadcast message to {@link Player} with a specified permission
      * @param player Requires a {@link Player}
      * @param permission Requires a permission
      * @param message Requires a message as {@link Component}
@@ -130,14 +129,14 @@ public class MessageBuilder {
      * @author Elia
      * @since V.1.0.0
      * @version V.1.0.0
-     * @description Send a broadcast message to {@link Player} with a specify permission with prefix
+     * @description Send a broadcast message to {@link Player} with a specified permission with prefix
      * @param player Requires a {@link Player}
      * @param permission Requires a permission
      * @param message Requires a message as {@link Component}
      */
     public static void broadcastWithPrefix(@NotNull Player player , String permission , Component message){
         if (player.hasPermission(permission)) {
-            Bukkit.broadcast(prefix.prefix().append(message));
+            Bukkit.broadcast(prefix().append(message));
         }
     }
 
@@ -145,7 +144,7 @@ public class MessageBuilder {
      * @author Elia
      * @since V.1.0.0
      * @version V.1.0.0
-     * @description Send a broadcast message to {@link Player} with a specify permission
+     * @description Send a broadcast message to {@link Player} with a specified permission
      * @param player Requires a {@link Player}
      * @param permission Requires a permission
      * @param message Requires a message as {@link String}
@@ -160,14 +159,14 @@ public class MessageBuilder {
      * @author Elia
      * @since V.1.0.0
      * @version V.1.0.0
-     * @description Send a broadcast message to {@link Player} with a specify permission with prefix
+     * @description Send a broadcast message to {@link Player} with a specified permission with prefix
      * @param player Requires a {@link Player}
      * @param permission Requires a permission
      * @param message Requires a message as {@link String}
      */
     public static void broadcastWithPrefix(@NotNull Player player , String permission , String message){
         if (player.hasPermission(permission)) {
-            Bukkit.broadcast(miniMessage.deserialize(prefix.prefix() + message));
+            Bukkit.broadcast(miniMessage.deserialize(prefix() + message));
         }
     }
 
@@ -175,7 +174,7 @@ public class MessageBuilder {
      * @author Elia
      * @since V.1.0.0
      * @version V.1.0.0
-     * @description Send a broadcast message to {@link Player} with a specify permission
+     * @description Send a broadcast message to {@link Player} with a specified permission
      * @param permission Requires a permission
      * @param message Requires a message as {@link Component}
      */
@@ -187,19 +186,19 @@ public class MessageBuilder {
      * @author Elia
      * @since V.1.0.0
      * @version V.1.0.0
-     * @description Send a broadcast message to {@link Player} with a specify permission with Prefix
+     * @description Send a broadcast message to {@link Player} with a specified permission with Prefix
      * @param permission Requires a permission
      * @param message Requires a message as {@link Component}
      */
     public static void broadcastWithPrefix(Component message , String permission){
-        Bukkit.broadcast(prefix.prefix().append(message) , permission);
+        Bukkit.broadcast(prefix().append(message) , permission);
     }
 
     /**
      * @author Elia
      * @since V.1.0.0
      * @version V.1.0.0
-     * @description Send a broadcast message to {@link Player} with a specify permission
+     * @description Send a broadcast message to {@link Player} with a specified permission
      * @param permission Requires a permission
      * @param message Requires a message as {@link String}
      */
@@ -211,12 +210,12 @@ public class MessageBuilder {
      * @author Elia
      * @since V.1.0.0
      * @version V.1.0.0
-     * @description Send a broadcast message to {@link Player} with a specify permission with prefix
+     * @description Send a broadcast message to {@link Player} with a specified permission with prefix
      * @param permission Requires a permission
      * @param message Requires a message as {@link String}
      */
     public static void broadcastWithPrefix(String message , String permission){
-        Bukkit.broadcast(miniMessage.deserialize(prefix.prefix() + message) , permission);
+        Bukkit.broadcast(miniMessage.deserialize(prefix() + message) , permission);
     }
 
     /**
@@ -304,7 +303,7 @@ public class MessageBuilder {
      * @param message Requires the Message
      */
     public static void permissionMessage(String command , String message){
-        Component component = miniMessage.deserialize(prefix.errorPrefix() + message);
+        Component component = miniMessage.deserialize(errorPrefix() + message);
         Bukkit.getPluginCommand(command).permissionMessage(component);
     }
 
@@ -327,7 +326,7 @@ public class MessageBuilder {
      * @param message Requires a message as {@link Component}
      */
     public static void messageWithPrefix(@NotNull Player player , Component message){
-        player.sendMessage(prefix.prefix().append(message));
+        player.sendMessage(prefix().append(message));
     }
 
     /**
@@ -349,7 +348,7 @@ public class MessageBuilder {
      * @param message Requires a message as {@link String}
      */
     public static void messageWithPrefix(@NotNull Player player , String message){
-        player.sendMessage(miniMessage.deserialize(prefix.prefix() + message));
+        player.sendMessage(miniMessage.deserialize(prefix() + message));
     }
 
     /**
@@ -371,7 +370,7 @@ public class MessageBuilder {
      * @param message Requires a message as {@link Component}
      */
     public static void messageWithPrefix(@NotNull CommandSender sender , Component message){
-        sender.sendMessage(prefix.prefix().append(message));
+        sender.sendMessage(prefix().append(message));
     }
 
     /**
@@ -393,7 +392,7 @@ public class MessageBuilder {
      * @param message Requires a message as {@link String}
      */
     public static void messageWithPrefix(@NotNull CommandSender sender , String message){
-        sender.sendMessage(miniMessage.deserialize(prefix.prefix() + message));
+        sender.sendMessage(miniMessage.deserialize(prefix() + message));
     }
 
     //FOR THIS CLASS
@@ -422,7 +421,7 @@ public class MessageBuilder {
      * @since V.1.0.0
      * @version V.1.0.0
      * @description create a hover text
-     * @param textToShow the message to show if the player hover
+     * @param textToShow the message to show if the player hovers
      * @param message Requires a message
      * @return {@link Component}
      */
@@ -603,7 +602,7 @@ public class MessageBuilder {
      * @author Elia
      * @since V.1.0.0
      * @version V.1.0.0
-     * @description write a light purple message
+     * @description write a light-purple message
      * @param message Requires a message
      * @return {@link Component}
      */
@@ -668,7 +667,7 @@ public class MessageBuilder {
      * @author Elia
      * @since V.1.0.0
      * @version V.1.0.0
-     * @description write a underlined message
+     * @description write an underlined message
      * @param message Requires a message
      * @return {@link Component}
      */

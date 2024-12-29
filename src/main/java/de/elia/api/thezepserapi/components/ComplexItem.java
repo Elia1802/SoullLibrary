@@ -20,6 +20,7 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.persistence.PersistentDataType;
 import org.bukkit.plugin.Plugin;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -159,9 +160,10 @@ public class ComplexItem implements Cloneable {
   public void giveItem(Player player) {
     player.getInventory().addItem(this.ITEM);
   }
-  public ComplexItem addAttribute(Attribute attribute, double amount, AttributeModifier.Operation operation, EquipmentSlot slot) {
+
+  public ComplexItem addAttribute(Attribute attribute, double amount, AttributeModifier.Operation operation, EquipmentSlot slot, @NotNull Plugin plugin) {
     ItemMeta meta = this.ITEM.getItemMeta();
-    meta.addAttributeModifier(attribute, new AttributeModifier(UUID.randomUUID(), attribute.translationKey(), amount, operation, slot));
+    meta.addAttributeModifier(attribute, new AttributeModifier(new NamespacedKey(plugin, UUID.randomUUID().toString()) , amount, operation, slot.getGroup()));
     this.ITEM.setItemMeta(meta);
     return this;
   }

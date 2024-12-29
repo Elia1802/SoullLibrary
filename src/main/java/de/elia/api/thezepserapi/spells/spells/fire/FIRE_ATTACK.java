@@ -42,7 +42,7 @@ public class FIRE_ATTACK {
           public void run() {
             if (COUNT < 13) {
               POSITION.add(DIRECTION.multiply(1.0));
-              POSITION.getWorld().spawnParticle(Particle.DRIP_LAVA, POSITION, 20);
+              POSITION.getWorld().spawnParticle(Particle.DRIPPING_LAVA, POSITION, 20);
               Collection<LivingEntity> entities = POSITION.getNearbyLivingEntities(1);
               for (LivingEntity entity : entities) {
                 if (pvp) {

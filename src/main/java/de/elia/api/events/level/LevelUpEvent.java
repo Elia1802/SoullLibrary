@@ -9,10 +9,10 @@ public class LevelUpEvent extends Event {
 
     private static final HandlerList HANDLER_LIST = new HandlerList();
     private final Player player;
-    private final int oldLevel;
-    private final int newLevel;
+    private final double oldLevel;
+    private final double newLevel;
 
-    public LevelUpEvent(@NotNull Player player, int oldLevel, int newLevel){
+    public LevelUpEvent(@NotNull Player player, double oldLevel, double newLevel){
         this.player = player;
         this.oldLevel = oldLevel;
         this.newLevel = newLevel;
@@ -23,11 +23,11 @@ public class LevelUpEvent extends Event {
         return player;
     }
 
-    public int getNewLevel() {
+    public double getNewLevel() {
         return newLevel;
     }
 
-    public int getOldLevel() {
+    public double getOldLevel() {
         return oldLevel;
     }
 

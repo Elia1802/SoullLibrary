@@ -1,6 +1,5 @@
 package de.elia.api.thezepserapi.components;
 
-import de.elia.api.thezepserapi.TheZepserAPI;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;

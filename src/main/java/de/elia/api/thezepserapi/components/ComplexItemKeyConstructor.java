@@ -6,7 +6,7 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.plugin.Plugin;
 
-public class ComplexItemKeyConstructer {
+public class ComplexItemKeyConstructor {
   public String getKey(ItemStack itemStack) {
     ItemMeta meta = itemStack.getItemMeta();
     return meta.getPersistentDataContainer().getKeys().toString();

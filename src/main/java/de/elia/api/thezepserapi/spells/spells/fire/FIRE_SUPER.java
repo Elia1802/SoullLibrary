@@ -1,6 +1,5 @@
 package de.elia.api.thezepserapi.spells.spells.fire;
 
-import de.elia.api.thezepserapi.TheZepserAPI;
 import de.elia.api.thezepserapi.components.FlightBlocked;
 import org.bukkit.Location;
 import org.bukkit.Particle;
@@ -38,7 +37,7 @@ public class FIRE_SUPER {
       double x2 = particleRadius * Math.cos(radians);
       double z2 = particleRadius * Math.sin(radians);
       location.add(x2, 0, z2);
-      location.getWorld().spawnParticle(Particle.DRIP_LAVA, location, 2);
+      location.getWorld().spawnParticle(Particle.DRIPPING_LAVA, location, 2);
       location.subtract(x2, 0, z2);
     }
     player.addPotionEffect(new PotionEffect(PotionEffectType.LEVITATION, 20 * 4, 2, false, false, false));
@@ -58,7 +57,7 @@ public class FIRE_SUPER {
                 COUNT0++;
                 Location location1 = PARTICLE_LOCATION.get(COUNT0);
                 for (Player player1 : playerCollection) {
-                  player1.spawnParticle(Particle.DRIP_LAVA, location1, 4);
+                  player1.spawnParticle(Particle.DRIPPING_LAVA, location1, 4);
                   PARTICLE_LOCATION.remove(COUNT0);
                 }
               }

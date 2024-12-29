@@ -8,14 +8,34 @@ import org.jetbrains.annotations.NotNull;
 
 public class BootsTrapper implements PluginBootstrap {
 
+<<<<<<< Updated upstream
 
     @Override
     public void bootstrap(@NotNull BootstrapContext context) {
         //...
+=======
+    public static final PluginLogger PLUGIN_LOGGER = new PluginLogger("Soul-Library");
+
+    @Override
+    public void bootstrap(@NotNull BootstrapContext context) {
+        PLUGIN_LOGGER.logInfo("Boot " + NAME + "...");
+        PLUGIN_LOGGER.logInfo("This is an build of " + NAME + "!");
+>>>>>>> Stashed changes
     }
 
     @Override
     public @NotNull JavaPlugin createPlugin(@NotNull PluginProviderContext context) {
+<<<<<<< Updated upstream
+=======
+        PLUGIN_LOGGER.logInfo("Information about this Plugin");
+        PLUGIN_LOGGER.logInfo("Name: " + NAME);
+        PLUGIN_LOGGER.logInfo("API-Name: " + API_NAME);
+        PLUGIN_LOGGER.logInfo("API-Version: " + API_VERSION);
+        PLUGIN_LOGGER.logInfo("Version: " + VERSION);
+        PLUGIN_LOGGER.logInfo("Authors: " + AUTHOR);
+        PLUGIN_LOGGER.logInfo("Booting finished!");
+        PLUGIN_LOGGER.logInfo("Load Main!");
+>>>>>>> Stashed changes
         return new Main();
     }
 }

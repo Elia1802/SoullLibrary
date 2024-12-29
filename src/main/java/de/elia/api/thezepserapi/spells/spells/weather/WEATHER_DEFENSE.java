@@ -41,7 +41,7 @@ public class WEATHER_DEFENSE implements Listener {
             double x = 6 * Math.cos(radians);
             double z = 6 * Math.sin(radians);
             location.add(x, 0, z);
-            location.getWorld().spawnParticle(Particle.DRIP_WATER, location, 1);
+            location.getWorld().spawnParticle(Particle.DRIPPING_WATER, location, 1);
             location.subtract(x, 0, z);
           }
         } else {

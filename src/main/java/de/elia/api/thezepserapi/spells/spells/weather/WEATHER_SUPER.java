@@ -41,7 +41,7 @@ public class WEATHER_SUPER implements Listener {
         if (COUNT < 300) {
           COUNT++;
           Location locat1on = player.getLocation();
-          locat1on.getWorld().spawnParticle(Particle.DRIP_WATER, locat1on, 1);
+          locat1on.getWorld().spawnParticle(Particle.DRIPPING_WATER, locat1on, 1);
         } else {
           cancel();
         }
