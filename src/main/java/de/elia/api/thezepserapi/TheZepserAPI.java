@@ -2,10 +2,10 @@ package de.elia.api.thezepserapi;
 
 import de.elia.api.Main;
 import de.elia.api.messages.prefix.PrefixClass;
+import de.elia.api.thezepserapi.components.ComplexItemKeyConstructor;
 import de.elia.api.thezepserapi.datatypes.ItemRegion;
 import de.elia.api.thezepserapi.enums.ItemRegionType;
 import de.elia.api.thezepserapi.components.ComplexItem;
-import de.elia.api.thezepserapi.components.ComplexItemKeyConstructer;
 import de.elia.api.thezepserapi.components.SpawnCircle;
 import net.kyori.adventure.text.Component;
 import org.bukkit.Location;
@@ -64,15 +64,15 @@ public interface TheZepserAPI {
 
   class Item {
     public static String createKey(Complex item) {
-      return new ComplexItemKeyConstructer().createKey(item);
+      return new ComplexItemKeyConstructor().createKey(item);
     }
 
     public static boolean hasKey(ItemStack itemStack, String key, Plugin plugin) {
       if (itemStack == null)return false;
-      return new ComplexItemKeyConstructer().hasKey(itemStack, key, plugin);
+      return new ComplexItemKeyConstructor().hasKey(itemStack, key, plugin);
     }
     public static String getKey(ItemStack itemStack) {
-      return new ComplexItemKeyConstructer().getKey(itemStack);
+      return new ComplexItemKeyConstructor().getKey(itemStack);
     }
     public static ComplexItem create(Material material, Component displayName, List<Component> lore) {
       return new ComplexItem(material, displayName, lore);
