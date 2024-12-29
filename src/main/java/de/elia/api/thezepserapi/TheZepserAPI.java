@@ -2,18 +2,10 @@ package de.elia.api.thezepserapi;
 
 import de.elia.api.Main;
 import de.elia.api.messages.prefix.PrefixClass;
-import de.elia.api.thezepserapi.components.ComplexItemKeyConstructor;
 import de.elia.api.thezepserapi.datatypes.ItemRegion;
 import de.elia.api.thezepserapi.enums.ItemRegionType;
 import de.elia.api.thezepserapi.components.ComplexItem;
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-=======
 import de.elia.api.thezepserapi.components.ComplexItemKeyConstructor;
->>>>>>> Stashed changes
-=======
-import de.elia.api.thezepserapi.components.ComplexItemKeyConstructor;
->>>>>>> Stashed changes
 import de.elia.api.thezepserapi.components.SpawnCircle;
 import net.kyori.adventure.text.Component;
 import org.bukkit.Location;
@@ -32,15 +24,7 @@ public interface TheZepserAPI {
 
   Component Prefix= PrefixClass.prefix();
   static void indicator(int number) {
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-    Main.logger().info("Indicator: " + number);
-=======
-    Main.logger().logInfo("Indicator: " + number);
->>>>>>> Stashed changes
-=======
-    Main.logger().logInfo("Indicator: " + number);
->>>>>>> Stashed changes
+    Main.getSoulLibrary().logger().logInfo("Indicator: " + number);
   }
 
 

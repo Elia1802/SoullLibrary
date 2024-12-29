@@ -1,53 +1,34 @@
 package de.elia.api;
 
+import de.elia.api.logging.PluginLogger;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.jetbrains.annotations.NotNull;
 
-import java.util.logging.Logger;
-
 public class Main extends JavaPlugin {
 
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-   private static final Logger logger = Logger.getLogger("Soul-Library");
+   private final PluginLogger logger;
 
-   @Override
-   public void onEnable(){
-      logger.info("Please initialize this library in the other plugin");
-=======
-=======
->>>>>>> Stashed changes
-   private static final PluginLogger LOG = BootsTrapper.PLUGIN_LOGGER;
+   public Main(PluginLogger logger) {
+      this.logger = logger;
+   }
    private static Main soulLibrary;
 
    @Override
    public void onEnable(){
       soulLibrary = this;
-      LOG.logWarning("Please initialize this library in the other plugin");
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
+      logger.logWarning("Please initialize this library in the other plugin");
    }
 
    @Override
-   public void onDisable(){
+   public void onDisable(){}
 
+   public static Main getSoulLibrary() {
+      return soulLibrary;
    }
 
    @NotNull
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-   public static Logger logger(){
+   public PluginLogger logger() {
       return logger;
-=======
-   public static PluginLogger logger() {
-      return LOG;
->>>>>>> Stashed changes
-=======
-   public static PluginLogger logger() {
-      return LOG;
->>>>>>> Stashed changes
    }
 
 }
