@@ -8,6 +8,9 @@ plugins {
 
 java {
     toolchain.languageVersion.set(JavaLanguageVersion.of(21))
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 }
 
@@ -24,6 +27,7 @@ repositories {
 
 dependencies {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     compileOnly("io.papermc.paper:paper-api:1.20.2-R0.1-SNAPSHOT")
     implementation("org.apache.logging.log4j:log4j-api:2.20.0")
     implementation("org.apache.logging.log4j:log4j-core:2.20.0")
@@ -32,6 +36,8 @@ dependencies {
 tasks.test {
     useJUnitPlatform()
 =======
+=======
+>>>>>>> Stashed changes
     paperDevBundle("1.21.4-R0.1-20241205.222346-7")
     paperweightDevelopmentBundle("io.papermc.paper:dev-bundle:1.21.4-R0.1-20241205.222346-7")
     implementation("org.apache.logging.log4j:log4j-api:3.0.0-beta2")
