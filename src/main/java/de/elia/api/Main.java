@@ -7,21 +7,11 @@ import java.util.logging.Logger;
 
 public class Main extends JavaPlugin {
 
-<<<<<<< Updated upstream
    private static final Logger logger = Logger.getLogger("Soul-Library");
 
    @Override
    public void onEnable(){
       logger.info("Please initialize this library in the other plugin");
-=======
-   private static final PluginLogger LOG = BootsTrapper.PLUGIN_LOGGER;
-   private static Main soulLibrary;
-
-   @Override
-   public void onEnable(){
-      soulLibrary = this;
-      LOG.logWarning("Please initialize this library in the other plugin");
->>>>>>> Stashed changes
    }
 
    @Override
@@ -30,13 +20,8 @@ public class Main extends JavaPlugin {
    }
 
    @NotNull
-<<<<<<< Updated upstream
    public static Logger logger(){
       return logger;
-=======
-   public static PluginLogger logger() {
-      return LOG;
->>>>>>> Stashed changes
    }
 
 }
